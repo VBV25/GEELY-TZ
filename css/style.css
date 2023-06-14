@@ -253,7 +253,7 @@ b {
     top: 0;
     left: 50%;
     margin-left: calc(var(--widthContainer) / -2);
-    padding: 55px 0px 25px;
+    padding: 65px 0px 25px;
     display: -ms-grid;
     display: grid;
     -ms-flex-line-pack: justify;
@@ -262,31 +262,31 @@ b {
   .advertising-block__text-wrapper {
     text-align: center; }
   .advertising-block__title {
-    margin-bottom: 20px;
-    font-size: 38px;
+    margin-bottom: 30px;
+    font-size: 43px;
     font-weight: unset;
-    line-height: 38px;
+    line-height: 43px;
     font-style: normal; }
     .advertising-block__title span:first-child {
-      font-size: 42px;
+      font-size: 50px;
       font-weight: 400;
-      line-height: 42px;
+      line-height: 50px;
       font-style: normal; }
     .advertising-block__title span:last-child {
-      font-size: 35px;
-      font-weight: 400;
-      line-height: 35px;
+      font-size: 39px;
+      font-weight: unset;
+      line-height: 39px;
       font-style: normal; }
   .advertising-block__subtitle {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: unset;
-    line-height: 40px;
+    line-height: 51px;
     font-style: normal; }
   .advertising-block__form-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 70px; }
+    gap: 100px; }
   .advertising-block__form {
     width: 660px;
     display: -ms-grid;
@@ -294,9 +294,9 @@ b {
     grid-template-areas: 'title title' 'input btn' 'input checkbox';
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: max-content 10px 50px 10px max-content;
-    grid-template-rows: -webkit-max-content 50px -webkit-max-content;
-    grid-template-rows: max-content 50px max-content;
+    -ms-grid-rows: max-content 10px max-content 10px max-content;
+    grid-template-rows: repeat(3, -webkit-max-content);
+    grid-template-rows: repeat(3, max-content);
     -webkit-column-gap: 20px;
     column-gap: 20px;
     row-gap: 10px; }
@@ -305,16 +305,16 @@ b {
       -ms-grid-column: 1;
       -ms-grid-column-span: 3;
       grid-area: title;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 800;
-      line-height: 25px;
+      line-height: 40px;
       font-style: normal; }
     .advertising-block__form input {
       -ms-grid-row: 3;
       -ms-grid-row-span: 3;
       -ms-grid-column: 1;
       grid-area: input;
-      height: 50px;
+      height: 56px;
       padding: 20px 25px;
       font-size: 16px;
       font-weight: unset;
@@ -324,7 +324,7 @@ b {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: btn;
-    height: 100%;
+    height: 56px;
     padding: 0px 25px;
     font-size: 16px;
     font-weight: unset;
@@ -388,6 +388,7 @@ b {
     width: -moz-max-content;
     width: max-content;
     z-index: 2;
+    margin-top: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -426,38 +427,38 @@ b {
       -ms-transform: skewX(-13deg);
       transform: skewX(-13deg); }
   .advertising-block__section:first-child {
-    padding: 10px 20px;
+    padding: 10px 35px;
     color: #000000;
     text-transform: uppercase; }
     .advertising-block__section:first-child p:first-child {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 600;
-      line-height: 26px;
+      line-height: 30px;
       font-style: normal; }
     .advertising-block__section:first-child p:last-child {
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 600;
-      line-height: 20px;
+      line-height: 24px;
       font-style: normal; }
     .advertising-block__section:first-child::before {
       left: 2px;
       background-color: #ccd5ea;
-      border-radius: 15px 0px 0px 15px; }
+      border-radius: 17px 0px 0px 17px; }
   .advertising-block__section:last-child {
-    padding: 10px 8px 10px 10px;
+    padding: 10px;
     color: #002d96;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
-    line-height: 45px;
+    line-height: 50px;
     font-style: normal; }
     .advertising-block__section:last-child span {
-      font-size: 30px;
+      font-size: 35px;
       font-weight: bold;
-      line-height: 30px;
+      line-height: 35px;
       font-style: normal; }
     .advertising-block__section:last-child::before {
       left: -2px;
       background-color: #ffffff;
-      border-radius: 0px 15px 15px 0px; }
+      border-radius: 0px 17px 17px 0px; }
 
 /*# sourceMappingURL=style.css.map */
