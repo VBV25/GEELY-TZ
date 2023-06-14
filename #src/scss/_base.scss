@@ -1,0 +1,94 @@
+//------------------------ПЕРЕМЕННЫЕ---------------------------------------------
+//-цвета-
+$blackColor: #000000;
+$blackColorOpacity: rgba(0, 0, 0, 0.964);
+$grayColor: #808080;
+$smokeColor: #cccccc;
+$whiteColor: #ffffff;
+$navBlockColor: #2f3d47;
+$darkBluePhoneColor: #303030;
+$btnBlueColor: #002d96;
+$btnBlueOpacityColor: #ccd5ea;
+//----------
+//-шрифты-
+$fontFamilyBase: 'Open Sans', sans-serif;
+//-----------------------------------------------миксины----------------------------------------------
+//вставка изображения как фона(без ссылки на изображение)
+@mixin bgImg($bgImSize: 100% 100%, $bgPosition: center, $bgRepeat: no-repeat) {
+  background-size: $bgImSize;
+  background-position: $bgPosition;
+  background-repeat: $bgRepeat;
+}
+
+//параметры шрифтов
+@mixin fontSize($fs: 16px, $liHe: 24px, $fWe: 400) {
+  font-size: $fs;
+  font-weight: $fWe;
+  line-height: $liHe;
+  font-style: normal;
+}
+
+/*
+//флекс элемент по центру
+@mixin flCent($jusCon: center, $alIt: center) {
+  display: flex;
+  justify-content: $jusCon;
+  align-items: $alIt;
+}
+
+//флекс элемент слева центр
+@mixin flStartCen($jusCon: start, $alIt: center) {
+  display: flex;
+  justify-content: $jusCon;
+  align-items: $alIt;
+}
+
+//флекс элемент: по вертикали центр, горизонтально - разнесено по краям
+@mixin flexSpBeCent($jusCon: space-between, $alIt: center) {
+  display: flex;
+  justify-content: $jusCon;
+  align-items: $alIt;
+}
+
+//грид элемент: по вертикали центр, горизонтально - разнесено по краям
+@mixin gridSpBeCent($jusCon: space-between, $alIt: center) {
+  display: grid;
+  justify-content: $jusCon;
+  align-items: $alIt;
+}
+
+//грид центр
+@mixin gridCent($jusCon: center, $alIt: center) {
+  display: grid;
+  justify-content: $jusCon;
+  align-items: $alIt;
+}
+
+//обводка текста
+@mixin textBorderWhite {
+  text-shadow: -0 -2px 2px $whiteColor, 0 -2px 2px $whiteColor,
+    -0 2px 2px $whiteColor, 0 2px 2px $whiteColor, -2px -0 2px $whiteColor,
+    2px -0 2px $whiteColor, -2px 0 2px $whiteColor, 2px 0 2px $whiteColor,
+    -2px -2px 2px $whiteColor, 2px -2px 2px $whiteColor,
+    -2px 2px 2px $whiteColor, 2px 2px 2px $whiteColor, -2px -2px 2px $whiteColor,
+    2px -2px 2px $whiteColor, -2px 2px 2px $whiteColor, 2px 2px 2px $whiteColor;
+}
+
+@mixin textBorderSmokeColor {
+  text-shadow: -0 -1px 1px $smokeColor, 0 -1px 1px $smokeColor,
+    -0 1px 1px $smokeColor, 0 1px 1px $smokeColor, -1px -0 1px $smokeColor,
+    1px -0 1px $smokeColor, -1px 0 1px $smokeColor, 1px 0 1px $smokeColor,
+    -1px -1px 1px $smokeColor, 1px -1px 1px $smokeColor,
+    -1px 1px 1px $smokeColor, 1px 1px 1px $smokeColor, -1px -1px 1px $smokeColor,
+    1px -1px 1px $smokeColor, -1px 1px 1px $smokeColor, 1px 1px 1px $smokeColor;
+}
+
+@mixin textBorderBlack {
+  text-shadow: -0 -1px 1px $blackColor, 0 -1px 1px $blackColor,
+    -0 1px 1px $blackColor, 0 1px 1px $blackColor, -1px -0 1px $blackColor,
+    1px -0 1px $blackColor, -1px 0 1px $blackColor, 1px 0 1px $blackColor,
+    -1px -1px 1px $blackColor, 1px -1px 1px $blackColor,
+    -1px 1px 1px $blackColor, 1px 1px 1px $blackColor, -1px -1px 1px $blackColor,
+    1px -1px 1px $blackColor, -1px 1px 1px $blackColor, 1px 1px 1px $blackColor;
+}
+*/

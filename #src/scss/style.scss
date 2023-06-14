@@ -1,0 +1,32 @@
+@import 'null-style';
+@import 'base';
+//--------------------------------------
+:root {
+  --widthContainer: 1140px;
+}
+
+body {
+  background-color: $smokeColor;
+  font-family: $fontFamilyBase;
+}
+
+h1 {
+  font-size: 0;
+  position: absolute;
+  z-index: -200;
+  opacity: 0;
+}
+
+.container {
+  width: var(--widthContainer);
+  height: max-content;
+}
+
+b {
+  font-weight: bold !important;
+}
+
+@import 'header';
+@import 'navigation-block';
+@import 'advertising-block';
+@import 'info-block';

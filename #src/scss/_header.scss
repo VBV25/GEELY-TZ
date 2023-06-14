@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  height: max-content;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $whiteColor;
+  img {
+    background-color: $smokeColor;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $navBlockColor;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 174px;
+      height: 33px;
+    }
+  }
+  &__line-logo {
+    margin: 0px 25px;
+    border: 1px solid $navBlockColor;
+  }
+  &__address {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    @include fontSize(12px, 12px, 500);
+    img {
+      width: 14px;
+      height: 20px;
+    }
+  }
+  &__phone-container {
+    display: flex;
+    @include fontSize(16px, 16px, bold);
+  }
+  &__btn {
+    border: 1px solid $btnBlueColor;
+    color: $btnBlueColor;
+    padding: 10px 30px;
+    @include fontSize(14px, 14px, 500);
+    cursor: pointer;
+  }
+}

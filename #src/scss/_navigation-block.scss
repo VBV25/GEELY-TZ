@@ -1,0 +1,23 @@
+//list-style: none ;
+.navigation-block {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  color: $whiteColor;
+  background-color: $navBlockColor;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__model,
+  &__menu {
+    display: flex;
+    gap: 25px;
+    text-transform: uppercase;
+    @include fontSize(13px, 13px, 500);
+  }
+  &__link {
+    list-style: none;
+    cursor: pointer;
+  }
+}
