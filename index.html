@@ -22,16 +22,16 @@
 <header class="header">
   <div class="header__container container">
     <div class="header__logo">
-      <img src="" alt="GEELY">
+      <img src="img/svg/geely-logo.svg" alt="GEELY">
       <div class="header__line-logo"></div>
-      <img src="" alt="Orbis AUTO">
+      <img src="img/orbis.jpg" alt="Orbis AUTO">
     </div>
     <div class="header__address">
-      <img src="" alt="map">
+      <img src="img/svg/map-mark.svg" alt="map">
       <p>GEELY SHYMKENT<br>Тамерлановское шоссе 90Б.</p>
     </div>
     <div class="header__phone-container">
-      <img src="" alt="&#9990">
+      <img src="img/svg/phone.svg" alt="&#9990">
       <p>+7(778) 003-76-86</p>
     </div>
     <div class="header__btn">Заказать звонок</div>
@@ -77,7 +77,7 @@
         <input type="phone" placeholder="Номер телефона" id="phone" required>
         <!--'кнопка отправки'-->
         <button class="advertising-block__btn-form" type="button" id="btnForm">Получить предложение
-          <span>&rarr;</span></button>
+          <img src="img/svg/arrow-btn.svg" alt=""></button>
         <!--'чекбокс'-->
         <div class="advertising-block__checkbox">
 
@@ -104,85 +104,213 @@
 </section>
     <section class="info-block">
   <div class="info-block__container container">
-    <!---------------'Слайдер'--------------->
-    <div class="info-block__car-slider car-slider">
-      <!--'1слайд'-->
-      <div class="car-slider__item">
-        <!--'слайдер с фото'-->
-        <div class="car-slider__photo-slider photo-slider">
-          <!--'1слайд'-->
-          <div class="photo-slider__item">
-            <img src="img/car/1.png" alt="car">
-          </div>
-          <!--'3слайд'-->
-          <div class="photo-slider__item">
-            <img src="img/car/2.png" alt="car">
-          </div>
-          <!--'4слайд'-->
-          <div class="photo-slider__item">
-            <img src="img/car/3.png" alt="car">
-          </div>
-          <!--'5слайд'-->
-          <div class="photo-slider__item">
-            <img src="img/car/4.png" alt="car">
-          </div>
-        </div>
-        <!--'лейбл гарантии'-->
-        <div class="car-slider__label">
-          <img src="" alt="6 Лет Гарантии">
-        </div>
-        <!--'Кнопка подбора комплектации'-->
-        <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>&rarr;</button>
-        <!--'фото активного авто'-->
-        <img src="img/car/5.png" alt="car">
-        <!--'блок с пагинацией'-->
-        <div class="car-slider__bullet"></div>
+    <!--------'слайдер-фото'-------------->
+    <div class=" info-block__photo-slider photo-slider">
+
+      <div class="photo-slider__item">
+        <img src="img/car/interier/1.jpg" alt="car">
       </div>
-      <!--'2слайд'-->
-      <!--'3слайд'-->
-      <!--'4слайд'-->
-      <!--'5слайд'-->
 
+      <div class="photo-slider__item">
+        <img src="img/car/interier/2.jpg" alt="car">
+      </div>
 
+      <div class="photo-slider__item">
+        <img src="img/car/interier/3.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/interier/4.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/interier/5.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/1.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/2.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/3.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/4.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/5.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/6.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/7.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/8.jpg" alt="car">
+      </div>
+
+      <div class="photo-slider__item">
+        <img src="img/car/exterier/9.jpg" alt="car">
+      </div>
+    </div>
+    <!----------'Слайдер-авто'------------->
+    <div class="info-block__car-slider-wrapper">
+      <div class="car-slider">
+        <!--'1слайд'-->
+        <div class="car-slider__item" data-color-car="red">
+          <!--'группа кнопка и лейбл'-->
+          <div class="car-slider__group-btn">
+            <!--'лейбл '-->
+            <div class="car-slider__label">
+              <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
+            </div>
+            <!--'Кнопка '-->
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
+                src="img/svg/arrow-btn.svg" alt="">
+            </button>
+          </div>
+          <!--'фото активного авто'-->
+          <div class="car-slider__car-photo">
+            <img data-lazy="img/car/1.png" alt="car">
+          </div>
+        </div>
+        <!--'2слайд'-->
+        <div class="car-slider__item" data-color-car="gray">
+          <!--'группа кнопка и лейбл'-->
+          <div class="car-slider__group-btn">
+            <!--'лейбл '-->
+            <div class="car-slider__label">
+              <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
+            </div>
+            <!--'Кнопка '-->
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
+                src="img/svg/arrow-btn.svg" alt="">
+            </button>
+          </div>
+          <!--'фото активного авто'-->
+          <div class="car-slider__car-photo">
+            <img data-lazy="img/car/2.png" alt="car">
+          </div>
+        </div>
+        <!--'3слайд'-->
+        <div class="car-slider__item" data-color-car="white">
+          <!--'группа кнопка и лейбл'-->
+          <div class="car-slider__group-btn">
+            <!--'лейбл '-->
+            <div class="car-slider__label">
+              <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
+            </div>
+            <!--'Кнопка '-->
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
+                src="img/svg/arrow-btn.svg" alt="">
+            </button>
+          </div>
+          <!--'фото активного авто'-->
+          <div class="car-slider__car-photo">
+            <img data-lazy="img/car/3.png" alt="car">
+          </div>
+        </div>
+        <!--'4слайд'-->
+        <div class="car-slider__item" data-color-car="dark">
+          <!--'группа кнопка и лейбл'-->
+          <div class="car-slider__group-btn">
+            <!--'лейбл '-->
+            <div class="car-slider__label">
+              <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
+            </div>
+            <!--'Кнопка '-->
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
+                src="img/svg/arrow-btn.svg" alt="">
+            </button>
+          </div>
+          <!--'фото активного авто'-->
+          <div class="car-slider__car-photo">
+            <img data-lazy="img/car/4.png" alt="car">
+          </div>
+        </div>
+        <!--'5слайд'-->
+        <div class="car-slider__item" data-color-car="blue">
+          <!--'группа кнопка и лейбл'-->
+          <div class="car-slider__group-btn">
+            <!--'лейбл '-->
+            <div class="car-slider__label">
+              <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
+            </div>
+            <!--'Кнопка '-->
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
+                src="img/svg/arrow-btn.svg" alt="">
+            </button>
+          </div>
+          <!--'фото активного авто'-->
+          <div class="car-slider__car-photo">
+            <img data-lazy="img/car/5.png" alt="car">
+          </div>
+        </div>
+      </div>
+      <!--'Пагинация'-->
+      <div class="car-slider__bullet"></div>
+    </div>
+    <!---------------'контент'--------------->
+    <!--'заголовок'-->
+    <div class="info-block__text-group">
+      <h2 class="info-block__title title">Geely <span class="model-car-text">Coolray</span></h2>
+      <p class="info-block__subtitle">выгода до <b>1 800 000</b> <span>&#8376;</span></p>
+    </div>
+    <!--'блок карточек'-->
+    <div class="info-block__card-group">
+      <!--'1'-->
+      <div class="info-block__card"><img src="img/svg/arrow-circle.svg" alt="label">
+        <p class="info-block__card-text">
+          <b class="txt-card-uper">ВЫГОДА ПО ТРЕЙД-ИН</b> <br>до <span class="sum-sale">900 000</span><span>
+            &#8376;</span>
+        </p>
+      </div>
+      <!--'2'-->
+      <div class="info-block__card"><img src="img/svg/letter.svg" alt="label">
+        <p class="info-block__card-text">
+          <b class="txt-card-uper">ВЫГОДА ПО КРЕДИТУ</b><br> <b> от</b> <span class="sum-sale">600 000</span><span>
+            &#8376;</span>
+        </p>
+      </div>
+      <!--'3'-->
+      <div class="info-block__card"><img src="img/svg/present.svg" alt="label">
+        <p class="info-block__card-text">
+          <b class="txt-card-uper">Пакет доп.оборудования<br> в подарок</b><span class="sum-sale"> 300 000</span><span>
+            &#8376;</span>
+        </p>
+      </div>
+    </div>
+    <!--'блок кнопок'-->
+    <div class="info-block__btn-group">
+      <!--'1'-->
+      <button class="info-block__btn " id="btnTestDrive" type="button">
+        <p>Записаться на тестдрайв</p> <img src="img/svg/arrow-btn.svg" alt="">
+      </button>
+      <!--'2'-->
+      <button class="info-block__btn " id="btnInstallment" type="button">
+        <p>Частная рассрочка <b>0.01%</b></p> <img src="img/svg/arrow-btn.svg" alt="">
+      </button>
+      <!--'3'-->
+      <button class="info-block__btn " id="btnPrice" type="button">
+        <p>Узнать цену</p> <img src="img/svg/arrow-btn.svg" alt="">
+      </button>
+    </div>
+    <!--'прозрачный блок с моделью авто'-->
+    <div class="info-block__model-car">
+      <div class="model-car-text">COOLRAY</div>
     </div>
   </div>
 
-
-  <!---------------'контент'--------------->
-  <!--'заголовок'-->
-  <div class="info-block__text-group">
-    <h2 class="info-block__title title">Geely <span class="model-car-text">Coolray</span></h2>
-    <p class="info-block__subtitle">выгода до <b>1 800 000</b> <span>&#8376;</span></p>
-  </div>
-  <!--'блок карточек'-->
-  <div class="info-block__card-group">
-    <!--'1'-->
-    <div class="info-block__card"><img src="" alt="label"> <b class="txt-card-uper">ВЫГОДА ПО ТРЕЙД-ИН</b>до <span
-        class="sum-sale">900 000 <span> &#8376;</span></span>
-    </div>
-    <!--'2'-->
-    <div class="info-block__card"><img src="" alt="label"> <b class="txt-card-uper">ВЫГОДА ПО КРЕДИТУ</b>до <span
-        class="sum-sale">600 000 <span> &#8376;</span></span>
-    </div>
-  </div>
-  <!--'3'-->
-  <div class="info-block__card"><img src="" alt="label"> <b class="txt-card-uper">Пакет доп.оборудования в
-      подарок</b><span class="sum-sale">300 000 <span> &#8376;</span></span>
-  </div>
-  <!--'блок кнопок'-->
-  <div class="info-block__btn-group">
-    <!--'1'-->
-    <button class="info-block__btn " id="btnTestDrive" type="button">Записаться на тестдрайв <span
-        class="black-arrow">&rarr;</span></button>
-    <!--'2'-->
-    <button class="info-block__btn " id="btnInstallment" type="button">Частная рассрочка <b>0.01%</b><span
-        class="white-arrow">&rarr;</span></button>
-    <!--'3'-->
-    <button class="info-block__btn " id="btnPrice" type="button">Узнать цену <span
-        class="white-arrow">&rarr;</span></button>
-  </div>
-  <!--'прозрачный блок с моделью авто'-->
-  <div class="info-block__model-car model-car-text">COOLRAY</div>
 </section>
   </main>
   <!--'POPUP'-->

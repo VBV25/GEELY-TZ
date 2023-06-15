@@ -1,8 +1,13 @@
 .advertising-block {
   position: relative;
+  z-index: 20;
   height: max-content;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
   &__bg {
     width: 100%;
+    min-width: 1950px;
     position: relative;
     z-index: 1;
     img {
@@ -75,9 +80,10 @@
     align-items: center;
     color: $whiteColor;
     background-color: $btnBlueColor;
-    span {
-      height: max-content;
-      @include fontSize(30px, auto, 900);
+    img {
+      width: 40px;
+      height: 25px;
+      filter: invert(1);
     }
   }
   //чекбокс блок
@@ -138,7 +144,7 @@
     }
   }
   &__section:first-child {
-    padding: 10px 35px;
+    padding: 15px 35px;
     color: $blackColor;
     text-transform: uppercase;
     p:first-child {
@@ -154,7 +160,7 @@
     }
   }
   &__section:last-child {
-    padding: 10px;
+    padding: 15px 10px;
     color: $btnBlueColor;
     @include fontSize(50px, 50px, bold);
     span {

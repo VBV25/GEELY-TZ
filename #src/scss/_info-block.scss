@@ -1,0 +1,342 @@
+.info-block {
+  position: relative;
+  z-index: 5;
+  padding: 120px 0px 110px;
+  background-color: $whiteColor;
+  margin-top: -10px;
+  &__container {
+    position: relative;
+    height: max-content;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 'slider-photo slider-car text-block' 'slider-photo slider-car card' 'slider-photo slider-car btn-group';
+    grid-template-columns: max-content max-content 500px;
+    grid-template-rows: 120px max-content max-content;
+    column-gap: 15px;
+    row-gap: 50px;
+    &::before {
+      content: '';
+      position: absolute;
+      //z-index: -1;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background-color: $navBlockColor;
+      background-image: url('../img/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+  &__photo-slider {
+    grid-area: slider-photo;
+    margin: 50px 0px;
+  }
+  &__car-slider-wrapper {
+    grid-area: slider-car;
+    min-width: 0;
+    padding: 60px 0px 35px;
+  }
+  //text
+  &__text-group {
+    grid-area: text-block;
+    height: max-content;
+    padding-left: 30px;
+  }
+  &__title {
+    @include fontSize(50px, 50px, 600);
+    text-transform: uppercase;
+    span {
+      color: $btnBlueColor;
+    }
+  }
+  &__subtitle {
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    height: max-content;
+    padding: 9px 30px;
+    margin-top: 30px;
+    @include fontSize(16px, 16px, 700);
+    color: $whiteColor;
+    text-transform: uppercase;
+    &::before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $blackColor;
+      transform: skewX(-13deg);
+      border-radius: 13px;
+    }
+    b {
+      @include fontSize(24px, 24px, 900);
+    }
+    span {
+      @include fontSize(14px, 14px, 700);
+    }
+  }
+  //card
+  &__card-group {
+    grid-area: card;
+    height: max-content;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: auto;
+    row-gap: 30px;
+  }
+  &__card {
+    height: 50px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    @include fontSize(14px, 14px, 400);
+    gap: 15px;
+    img {
+      width: 40px;
+      height: 50px;
+    }
+    .txt-card-uper {
+      @include fontSize(14px, 14px, 900);
+      text-transform: uppercase;
+    }
+    span {
+      color: $btnBlueColor;
+    }
+    .sum-sale {
+      @include fontSize(20px, 20px, 900);
+    }
+  }
+  //btn
+  &__btn-group {
+    grid-area: btn-group;
+    height: max-content;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    #btnTestDrive {
+      background-color: $whiteColor;
+      border: 1px solid $blackColor;
+      color: $blackColor;
+    }
+    #btnInstallment {
+      background-color: $btnBlueOpacityColor;
+      color: $blackColor;
+      img {
+        filter: invert(1);
+      }
+    }
+    #btnPrice {
+      background-color: $btnBlueColor;
+      color: $whiteColor;
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    @include fontSize(16px, 16px, 500);
+    b {
+      font-weight: 800 !important;
+    }
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+  //повернутый текст
+  &__model-car {
+    position: absolute;
+    z-index: 1;
+    right: -150px;
+    top: 0px;
+    width: 108px;
+    padding: 120px 0px 110px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .model-car-text {
+      transform: rotateZ(-90deg);
+      width: max-content;
+      height: max-content;
+      font-size: 115px;
+      line-height: 100px;
+      font-weight: bold;
+      color: $btnBlueOpacityColor;
+      opacity: 0.15;
+    }
+  }
+}
+
+//-----СЛАЙДЕР ФОТОГРАФИЙ ----
+.photo-slider {
+  width: max-content !important;
+  height: max-content !important;
+  position: relative;
+  // padding: 30px 0px;
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-track {
+    display: block;
+  }
+  &__item {
+    width: max-content !important;
+    height: max-content !important;
+    img {
+      width: 143px;
+      height: 120px;
+      margin: 10px 0px;
+      border-radius: 10px;
+      background-color: $smokeColor;
+    }
+  }
+  /*----стрелки----*/
+  .slick-arrow {
+    width: 34px;
+    height: 25px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    margin: 0px 0px 0px -17px;
+    font-size: 0;
+    background-color: unset !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    opacity: 0.8;
+  }
+  /*-стрелка влево-*/
+  .slick-arrow.slick-prev {
+    top: -30px;
+    background-image: url('../img/svg/up-arrow-white.svg');
+  }
+  /*-стрелка вправо-*/
+  .slick-arrow.slick-next {
+    bottom: -30px;
+    background-image: url('../img/svg/up-arrow-white.svg');
+    transform: rotateZ(180deg);
+  }
+}
+
+//-----------СЛАЙДЕР ЦВЕТА АВТО--------
+.car-slider {
+  width: 470px;
+  position: relative;
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-track {
+    display: flex;
+    gap: 0px;
+  }
+  //лейбл гарантии и кнопка коиплектации
+  &__group-btn {
+    display: flex;
+    gap: 50px;
+    padding: 0px 0px 35px 10px;
+  }
+  &__label {
+    width: 170px;
+    height: 80px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__btn {
+    height: max-content;
+    color: $whiteColor;
+    @include fontSize(14px, 18px, 600);
+    text-align: start;
+    text-transform: uppercase;
+    background-color: unset;
+    img {
+      width: 30px;
+      height: 25px;
+      filter: invert(1);
+    }
+  }
+  //фото авто
+  &__car-photo {
+    position: relative;
+    width: 470px;
+    height: max-content;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  //пагинация
+  &__bullet {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    padding: 10px 0px 0px 20px;
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slick-dots li {
+      list-style: none;
+      margin: 0px 10px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid;
+      border-color: rgba(255, 255, 255, 0);
+      border-radius: 50%;
+    }
+    .slick-dots li.slick-active {
+      border-color: $whiteColor;
+    }
+    .slick-dots button {
+      font-size: 0px;
+      width: 20px;
+      height: 20px;
+      background-color: $whiteColor;
+      border-radius: 50%;
+    }
+    .slick-dots li:nth-child(1) button {
+      background-color: $redBullet;
+    }
+    .slick-dots li:nth-child(2) button {
+      background-color: $greyBullet;
+    }
+    .slick-dots li:nth-child(3) button {
+      background-color: $whiteBullet;
+    }
+    .slick-dots li:nth-child(4) button {
+      background-color: $blackBullet;
+    }
+    .slick-dots li:nth-child(5) button {
+      background-color: $blueBullet;
+    }
+    .slick-dots li.slick-active button {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+//
+//
+//
+//
+//
+//

@@ -6,9 +6,6 @@
   justify-content: center;
   align-items: center;
   background-color: $whiteColor;
-  img {
-    background-color: $smokeColor;
-  }
   &__container {
     display: flex;
     justify-content: space-between;
@@ -39,7 +36,14 @@
   }
   &__phone-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     @include fontSize(16px, 16px, bold);
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
   }
   &__btn {
     border: 1px solid $btnBlueColor;

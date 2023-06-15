@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".photo-slider").slick({arrows:!0,slidesToShow:3,slidesToScroll:1,speed:1e3,infinite:!0,draggable:!0,swipe:!0,touchThreshold:3,touchMove:!0,vertical:!0,verticalSwiping:!0}),$(".car-slider").slick({arrows:!1,dots:!0,appendDots:$(".car-slider__bullet"),fade:!0,speed:1e3,infinite:!0,draggable:!0,swipe:!0,touchThreshold:3,touchMove:!0})});
