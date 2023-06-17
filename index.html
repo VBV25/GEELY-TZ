@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <h1>GEELY с выгодой 3 000 000 &#8376;</h1>
+
   <!--'ХЕДЕР'-->
 <header class="header">
   <div class="header__container container">
@@ -27,30 +27,31 @@
       <img src="img/orbis.jpg" alt="Orbis AUTO">
     </div>
     <div class="header__address">
-      <img src="img/svg/map-mark.svg" alt="map">
-      <p>GEELY SHYMKENT<br>Тамерлановское шоссе 90Б.</p>
+      <img class="header__address-img" src="img/svg/map-mark.svg" alt="map">
+      <p class="header__address-text">GEELY SHYMKENT<br>Тамерлановское шоссе 90Б.</p>
     </div>
     <div class="header__phone-container">
-      <img src="img/svg/phone.svg" alt="&#9990">
-      <p>+7(778) 003-76-86</p>
+      <img class="header__phone-img" src="img/svg/phone.svg" alt="&#9990">
+      <p class="header__phone-text">+7(778) 003-76-86</p>
     </div>
     <div class="header__btn">Заказать звонок</div>
   </div>
 </header>
   <main>
+    <h1>GEELY с выгодой 3 000 000 &#8376;</h1>
     <!--'НАВИГАЦИЯ'-->
 <section class="navigation-block">
   <div class="navigation-block__container container">
     <!--'МОДЕЛЬНЫЙ РЯД'-->
     <nav class="navigation-block__model">
-      <li class="navigation-block__link">Coolray</li>
+      <li class="navigation-block__link active-nav-link">Coolray</li>
       <li class="navigation-block__link">Azkarra</li>
       <li class="navigation-block__link">Tugella</li>
       <li class="navigation-block__link">Monjaro</li>
     </nav>
     <!--'МЕНЮ'-->
     <nav class="navigation-block__menu">
-      <li class="navigation-block__link">Подбор комплектации</li>
+      <li class="navigation-block__link active-nav-link">Подбор комплектации</li>
       <li class="navigation-block__link">Трейд-ин</li>
       <li class="navigation-block__link">Кредит</li>
       <li class="navigation-block__link">Тест-драйв</li>
@@ -60,7 +61,7 @@
 </section>
     <!--'РЕКЛАМНЫЙ БЛОК'-->
 <section class="advertising-block">
-  <div class="advertising-block__bg"><img src="img/banner1.jpg" alt=""></div>
+  <div class="advertising-block__bg"><img id="banner" src="img/banner1.jpg" alt=""></div>
   <div class="advertising-block__container container">
     <!--'ТЕКСТОВЫЙ блок'-->
     <div class="advertising-block__text-wrapper">
@@ -83,7 +84,7 @@
 
           <input id="formAgreement" checked type="checkbox" name="agreement" class="advertising-block__checkbox-input">
           <label for="formAgreement" class="advertising-block__checkbox-label">Согласие на <span
-              class="advertising-block__link">обработку персональных данных</span>
+              class="advertising-block__link"> обработку персональных данных</span>
           </label>
 
         </div>
@@ -175,8 +176,11 @@
               <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
             </div>
             <!--'Кнопка '-->
-            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
-                src="img/svg/arrow-btn.svg" alt="">
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+              <div class="car-slider__btn-img-group">
+                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
+              </div>
             </button>
           </div>
           <!--'фото активного авто'-->
@@ -193,8 +197,11 @@
               <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
             </div>
             <!--'Кнопка '-->
-            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
-                src="img/svg/arrow-btn.svg" alt="">
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+              <div class="car-slider__btn-img-group">
+                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
+              </div>
             </button>
           </div>
           <!--'фото активного авто'-->
@@ -211,8 +218,11 @@
               <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
             </div>
             <!--'Кнопка '-->
-            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
-                src="img/svg/arrow-btn.svg" alt="">
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+              <div class="car-slider__btn-img-group">
+                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
+              </div>
             </button>
           </div>
           <!--'фото активного авто'-->
@@ -229,8 +239,11 @@
               <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
             </div>
             <!--'Кнопка '-->
-            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
-                src="img/svg/arrow-btn.svg" alt="">
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+              <div class="car-slider__btn-img-group">
+                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
+              </div>
             </button>
           </div>
           <!--'фото активного авто'-->
@@ -247,8 +260,11 @@
               <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
             </div>
             <!--'Кнопка '-->
-            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br><img
-                src="img/svg/arrow-btn.svg" alt="">
+            <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+              <div class="car-slider__btn-img-group">
+                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
+              </div>
             </button>
           </div>
           <!--'фото активного авто'-->
@@ -313,6 +329,8 @@
 
 </section>
   </main>
+
+
   <!--'POPUP'-->
   <!--'Script'-->
   <script src="libs/slick.min.js"></script>

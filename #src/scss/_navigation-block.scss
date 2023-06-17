@@ -1,4 +1,3 @@
-//list-style: none ;
 .navigation-block {
   padding: 20px 0px;
   display: flex;
@@ -19,5 +18,67 @@
   &__link {
     list-style: none;
     cursor: pointer;
+    &:hover {
+      @include textBorderSmokeColor;
+    }
+  }
+}
+
+//
+//------------------------
+//------------------------
+//------------------------
+//------------------------
+//
+//----------MEDIA--------------
+@media (max-width: 1024px) {
+  .navigation-block {
+    padding: 20px 0px;
+    &__container {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 20px;
+    }
+    &__model {
+      order: 2;
+      gap: 70px;
+      @include fontSize(13px, 13px, 700);
+    }
+    &__menu {
+      width: 100%;
+      justify-content: space-between;
+      order: 1;
+      @include fontSize(12px, 12px, 500);
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1300px) {
+  .navigation-block {
+    padding: 23px 0px;
+    &__container {
+      row-gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-block {
+    padding: 10px 0px;
+    &__container {
+      row-gap: 15px;
+    }
+    &__model {
+      gap: 30px;
+      @include fontSize(13px, 13px, 700);
+    }
+    &__menu {
+      @include fontSize(10px, 10px, 500);
+    }
+    &__link {
+      &:hover {
+        text-shadow: unset;
+      }
+    }
   }
 }

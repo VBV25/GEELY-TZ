@@ -7,6 +7,7 @@ $whiteColor: #ffffff;
 $navBlockColor: #2f3d47;
 $darkBluePhoneColor: #303030;
 $btnBlueColor: #002d96;
+$btnBlueDarkColor: #08215d;
 $btnBlueOpacityColor: #ccd5ea;
 $greyBullet: #c0c0c0;
 $redBullet: #ff0000;
@@ -30,6 +31,26 @@ $fontFamilyBase: 'Open Sans', sans-serif;
   font-weight: $fWe;
   line-height: $liHe;
   font-style: normal;
+}
+
+@mixin textBorderSmokeColor {
+  text-shadow: -0 -0.5px 0.5px $blueBullet, 0 -0.5px 0.5px $blueBullet,
+    -0 0.5px 0.5px $blueBullet, 0 0.5px 0.5px $blueBullet,
+    -0.5px -0 0.5px $blueBullet, 0.5px -0 0.5px $blueBullet,
+    -0.5px 0 0.5px $blueBullet, 0.5px 0 0.5px $blueBullet,
+    -0.5px -0.5px 0.5px $blueBullet, 0.5px -0.5px 0.5px $blueBullet,
+    -0.5px 0.5px 0.5px $blueBullet, 0.5px 0.5px 0.5px $blueBullet,
+    -0.5px -0.5px 0.5px $blueBullet, 0.5px -0.5px 0.5px $blueBullet,
+    -0.5px 0.5px 0.5px $blueBullet, 0.5px 0.5px 0.5px $blueBullet;
+}
+
+@mixin textBorderBlack {
+  text-shadow: -0 -1px 1px $blackColor, 0 -1px 1px $blackColor,
+    -0 1px 1px $blackColor, 0 1px 1px $blackColor, -1px -0 1px $blackColor,
+    1px -0 1px $blackColor, -1px 0 1px $blackColor, 1px 0 1px $blackColor,
+    -1px -1px 1px $blackColor, 1px -1px 1px $blackColor,
+    -1px 1px 1px $blackColor, 1px 1px 1px $blackColor, -1px -1px 1px $blackColor,
+    1px -1px 1px $blackColor, -1px 1px 1px $blackColor, 1px 1px 1px $blackColor;
 }
 
 /*
@@ -78,14 +99,7 @@ $fontFamilyBase: 'Open Sans', sans-serif;
     2px -2px 2px $whiteColor, -2px 2px 2px $whiteColor, 2px 2px 2px $whiteColor;
 }
 
-@mixin textBorderSmokeColor {
-  text-shadow: -0 -1px 1px $smokeColor, 0 -1px 1px $smokeColor,
-    -0 1px 1px $smokeColor, 0 1px 1px $smokeColor, -1px -0 1px $smokeColor,
-    1px -0 1px $smokeColor, -1px 0 1px $smokeColor, 1px 0 1px $smokeColor,
-    -1px -1px 1px $smokeColor, 1px -1px 1px $smokeColor,
-    -1px 1px 1px $smokeColor, 1px 1px 1px $smokeColor, -1px -1px 1px $smokeColor,
-    1px -1px 1px $smokeColor, -1px 1px 1px $smokeColor, 1px 1px 1px $smokeColor;
-}
+
 
 @mixin textBorderBlack {
   text-shadow: -0 -1px 1px $blackColor, 0 -1px 1px $blackColor,

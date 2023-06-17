@@ -20,6 +20,7 @@ $(document).ready(function () {
     //--вертикальный слайдер
     vertical: true,
     verticalSwiping: true,
+    //
   });
   //
   $('.car-slider').slick({

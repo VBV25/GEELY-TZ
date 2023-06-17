@@ -5,9 +5,19 @@
   --widthContainer: 1140px;
 }
 
+html,
 body {
-  background-color: $smokeColor;
+  height: 100%;
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: $whiteColor;
   font-family: $fontFamilyBase;
+}
+
+main {
+  grid-area: main;
 }
 
 h1 {
@@ -20,13 +30,51 @@ h1 {
 .container {
   width: var(--widthContainer);
   height: max-content;
+  border: 2px solid red;
 }
 
 b {
   font-weight: bold !important;
 }
 
+.active-nav-link {
+  color: $blueBullet;
+  @include textBorderBlack;
+  cursor: grab !important;
+  &:hover {
+    text-shadow: unset !important;
+  }
+}
+
 @import 'header';
 @import 'navigation-block';
 @import 'advertising-block';
 @import 'info-block';
+//------------------------
+//------------------------
+//------------------------
+//------------------------
+//----------MEDIA--------------
+@media (max-width: 1480px) {
+  :root {
+    --widthContainer: 1024px;
+  }
+  .container {
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --widthContainer: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --widthContainer: 480px;
+  }
+  .container {
+    padding: 0px 9px;
+  }
+}

@@ -61,6 +61,7 @@
     @include fontSize(16px, 16px, 700);
     color: $whiteColor;
     text-transform: uppercase;
+    cursor: pointer;
     &::before {
       z-index: -1;
       content: '';
@@ -72,6 +73,9 @@
       background-color: $blackColor;
       transform: skewX(-13deg);
       border-radius: 13px;
+    }
+    &:hover::before {
+      background-color: $btnBlueColor;
     }
     b {
       @include fontSize(24px, 24px, 900);
@@ -125,19 +129,38 @@
       background-color: $whiteColor;
       border: 1px solid $blackColor;
       color: $blackColor;
+      &:hover {
+        background-color: $blackColor;
+        color: $whiteColor;
+      }
+      &:hover img {
+        filter: invert(1);
+      }
     }
     #btnInstallment {
       background-color: $btnBlueOpacityColor;
       color: $blackColor;
+      border: 1px solid $btnBlueOpacityColor;
       img {
         filter: invert(1);
       }
+      &:hover {
+        border: 1px solid $blackColor;
+        background-color: $whiteColor;
+      }
+      &:hover img {
+        filter: invert(0);
+      }
     }
     #btnPrice {
-      background-color: $btnBlueColor;
+      background-color: $btnBlueDarkColor;
       color: $whiteColor;
+      border: 1px solid $btnBlueDarkColor;
       img {
         filter: invert(1);
+      }
+      &:hover {
+        background-color: $btnBlueColor;
       }
     }
   }
@@ -251,23 +274,46 @@
   &__label {
     width: 170px;
     height: 80px;
+    cursor: pointer;
     img {
       width: 100%;
       height: 100%;
     }
+    &:hover img {
+      filter: invert(0.03);
+    }
   }
+  //КНОПКА ПОДБОР КОМПЛЕКТАЦИИ
   &__btn {
+    position: relative;
     height: max-content;
     color: $whiteColor;
     @include fontSize(14px, 18px, 600);
     text-align: start;
     text-transform: uppercase;
     background-color: unset;
-    img {
-      width: 30px;
-      height: 25px;
-      filter: invert(1);
+    overflow: hidden;
+    &:hover > .car-slider__btn-img-group {
+      left: 5px;
+      transition: all 1s ease 0s;
     }
+  }
+  &__btn-img-group {
+    position: relative;
+    left: -80px;
+    width: max-content;
+    display: flex;
+    gap: 40px;
+    transition: all 1s ease 0s;
+  }
+  &__btn-img-car {
+    width: 40px;
+    height: auto;
+  }
+  &__btn-img-arrow {
+    width: 30px;
+    height: 25px;
+    filter: invert(1);
   }
   //фото авто
   &__car-photo {
@@ -283,6 +329,8 @@
   //пагинация
   &__bullet {
     width: 100%;
+    position: relative;
+    z-index: 10;
     height: max-content;
     display: flex;
     padding: 10px 0px 0px 20px;
@@ -327,16 +375,547 @@
     .slick-dots li:nth-child(5) button {
       background-color: $blueBullet;
     }
-    .slick-dots li.slick-active button {
-      width: 20px;
-      height: 20px;
-    }
   }
 }
 
 //
+//------------------------
+//------------------------
+//------------------------
+//------------------------
 //
-//
-//
-//
-//
+//----------MEDIA--------------
+@media (max-width: 1480px) {
+  .info-block {
+    padding: 70px 0px;
+    margin-top: -10px;
+    &__container {
+      grid-template-columns: max-content max-content 40%;
+      grid-template-rows: max-content max-content max-content;
+      column-gap: 10px;
+      row-gap: 20px;
+      &::before {
+        left: -53%;
+        border-radius: 0 50px 50px 0;
+      }
+    }
+    &__photo-slider {
+      margin: 30px 0px;
+    }
+    &__car-slider-wrapper {
+      padding: 40px 0px 15px;
+    }
+    //text
+    &__text-group {
+      padding-left: 5px;
+    }
+    &__title {
+      @include fontSize(45px, 45px, 600);
+    }
+    &__subtitle {
+      padding: 7px 27px;
+      margin-top: 13px;
+      @include fontSize(14px, 14px, 700);
+      &::before {
+        border-radius: 13px;
+      }
+      b {
+        @include fontSize(18px, 18px, 900);
+      }
+      span {
+        @include fontSize(11px, 11px, 700);
+      }
+    }
+    //card
+    &__card-group {
+      padding-left: 5px;
+      row-gap: 15px;
+    }
+    &__card {
+      height: max-content;
+      @include fontSize(13px, 13px, 400);
+      gap: 9px;
+      img {
+        width: 30px;
+        height: auto;
+      }
+      .txt-card-uper {
+        @include fontSize(13px, 13px, 900);
+      }
+      .sum-sale {
+        @include fontSize(18px, 18px, 900);
+      }
+    }
+    //btn
+    &__btn-group {
+      padding-left: 5px;
+      // gap: 15px;
+    }
+    //повернутый текст
+    &__model-car {
+      right: 0px;
+      width: 70px;
+      .model-car-text {
+        font-size: 85px;
+        line-height: 85px;
+      }
+    }
+  }
+  //-----СЛАЙДЕР ФОТОГРАФИЙ ----
+  .photo-slider {
+    &__item {
+      img {
+        width: 120px;
+        height: auto;
+        margin: 7px 0px;
+        border-radius: 10px;
+      }
+    }
+    //----стрелки----
+    .slick-arrow {
+      width: 28px;
+      height: 20px;
+      margin: 0px 0px 0px -14px;
+    }
+    //-стрелка вверх-
+    .slick-arrow.slick-prev {
+      top: -20px;
+    }
+    //-стрелка вниз-
+    .slick-arrow.slick-next {
+      bottom: -20px;
+    }
+  }
+  //-----------СЛАЙДЕР ЦВЕТА АВТО--------
+  .car-slider {
+    width: 370px;
+    //лейбл гарантии и кнопка коиплектации
+    &__group-btn {
+      gap: 30px;
+      padding: 0px 0px 35px 10px;
+    }
+    &__label {
+      width: 130px;
+      height: auto;
+    }
+    //фото авто
+    &__car-photo {
+      width: 370px;
+    }
+    //пагинация
+    &__bullet {
+      padding: 10px 0px 0px 20px;
+      .slick-dots li {
+        margin: 0px 10px;
+        padding: 3px;
+      }
+      .slick-dots button {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .info-block {
+    margin-top: -10px;
+    &__container {
+      grid-template-columns: max-content max-content 40%;
+      grid-template-rows: max-content max-content max-content;
+      column-gap: 10px;
+      row-gap: 17px;
+      &::before {
+        left: -53%;
+        border-radius: 0 50px 50px 0;
+      }
+    }
+    &__photo-slider {
+      margin: 30px 0px;
+    }
+    &__car-slider-wrapper {
+      padding: 40px 0px 15px;
+    }
+    //text
+    &__text-group {
+      padding-left: 5px;
+    }
+    &__title {
+      @include fontSize(32px, 32px, 700);
+    }
+    &__subtitle {
+      padding: 5px 22px;
+      margin-top: 10px;
+      @include fontSize(12px, 12px, 700);
+      &::before {
+        border-radius: 7px;
+      }
+      b {
+        @include fontSize(16px, 16px, 900);
+      }
+      span {
+        @include fontSize(10px, 10px, 700);
+      }
+    }
+    //card
+    &__card-group {
+      padding-left: 5px;
+      row-gap: 10px;
+    }
+    &__card {
+      height: max-content;
+      @include fontSize(12px, 12px, 400);
+      gap: 7px;
+      img {
+        width: 25px;
+        height: auto;
+      }
+      .txt-card-uper {
+        @include fontSize(12px, 12px, 900);
+      }
+      .sum-sale {
+        @include fontSize(17px, 17px, 900);
+      }
+    }
+    //btn
+    &__btn-group {
+      padding-left: 5px;
+      gap: 12px;
+    }
+    &__btn {
+      padding: 10px 15px;
+      @include fontSize(14px, 14px, 500);
+      b {
+        font-weight: 800 !important;
+      }
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+    //повернутый текст
+    &__model-car {
+      right: -5px;
+      width: 60px;
+      .model-car-text {
+        font-size: 70px;
+        line-height: 67px;
+      }
+    }
+  }
+  //-----СЛАЙДЕР ФОТОГРАФИЙ ----
+  .photo-slider {
+    &__item {
+      img {
+        width: 90px;
+        height: auto;
+        margin: 5px 0px;
+        border-radius: 10px;
+      }
+    }
+  }
+  //-----------СЛАЙДЕР ЦВЕТА АВТО--------
+  .car-slider {
+    width: 280px;
+    margin-top: -5px;
+    //лейбл гарантии и кнопка коиплектации
+    &__group-btn {
+      gap: 15px;
+      padding: 0px 0px 10px 6px;
+      align-items: start;
+    }
+    &__label {
+      width: 100px;
+      height: auto;
+    }
+    //КНОПКА ПОДБОР КОМПЛЕКТАЦИИ
+    &__btn {
+      @include fontSize(12px, 14px, 600);
+      &:hover > .car-slider__btn-img-group {
+        left: 2px;
+      }
+    }
+    &__btn-img-group {
+      margin-top: 5px;
+      left: -60px;
+      gap: 20px;
+    }
+    //фото авто
+    &__car-photo {
+      width: 280px;
+    }
+    //пагинация
+    &__bullet {
+      padding: 5px 0px 0px 10px;
+      .slick-dots li {
+        margin: 0px 7px;
+        padding: 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1300px) {
+  .info-block {
+    padding: 100px 0px;
+    margin-top: -5px;
+    &__container {
+      row-gap: 35px;
+    }
+    &__photo-slider {
+      margin: 80px 0px;
+    }
+    &__car-slider-wrapper {
+      padding: 40px 0px 15px;
+    }
+    //text
+    &__subtitle {
+      margin-top: 25px;
+    }
+    //card
+    &__card-group {
+      row-gap: 20px;
+    }
+    &__card {
+      @include fontSize(14px, 14px, 400);
+      gap: 9px;
+      img {
+        width: 28px;
+      }
+      .txt-card-uper {
+        @include fontSize(14px, 14px, 900);
+      }
+      .sum-sale {
+        @include fontSize(19px, 19px, 900);
+      }
+    }
+    //btn
+    &__btn-group {
+      gap: 15px;
+    }
+    &__btn {
+      padding: 15px;
+      @include fontSize(15px, 15px, 500);
+      img {
+        width: 25px;
+      }
+    }
+    //повернутый текст
+    &__model-car {
+      right: -5px;
+      width: 60px;
+      .model-car-text {
+        font-size: 70px;
+        line-height: 67px;
+      }
+    }
+  }
+  //-----СЛАЙДЕР ФОТОГРАФИЙ ----
+  .photo-slider {
+    &__item {
+      img {
+        margin: 10px 0px;
+      }
+    }
+    //----стрелки----
+    .slick-arrow {
+      width: 32px;
+      height: 25px;
+      margin: 0px 0px 0px -16px;
+    }
+    //-стрелка вверх-
+    .slick-arrow.slick-prev {
+      top: -50px;
+    }
+    //-стрелка вниз-
+    .slick-arrow.slick-next {
+      bottom: -50px;
+    }
+  }
+  //-----------СЛАЙДЕР ЦВЕТА АВТО--------
+  .car-slider {
+    margin-top: 25px;
+    //фото авто
+    &__car-photo {
+      margin-top: 30px;
+      width: 280px;
+    }
+    //пагинация
+    &__bullet {
+      padding: 40px 0px 0px 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info-block {
+    // padding: 0px 0px;
+    margin-top: -10px;
+    &__container {
+      /*
+      grid-template-areas: 'slider-photo slider-car text-block' 'slider-photo slider-car card' 'slider-photo slider-car btn-group';
+      grid-template-columns: repeat(3, max-content);
+      
+     */
+      grid-template-columns: max-content max-content 40%;
+      grid-template-rows: max-content max-content max-content;
+      column-gap: 10px;
+      row-gap: 17px;
+      &::before {
+        left: -53%;
+        border-radius: 0 50px 50px 0;
+      }
+    }
+    &__photo-slider {
+      margin: 30px 0px;
+    }
+    &__car-slider-wrapper {
+      padding: 40px 0px 15px;
+    }
+    //text
+    &__text-group {
+      padding-left: 5px;
+    }
+    &__title {
+      @include fontSize(32px, 32px, 700);
+    }
+    &__subtitle {
+      padding: 5px 22px;
+      margin-top: 10px;
+      @include fontSize(12px, 12px, 700);
+      &::before {
+        border-radius: 7px;
+      }
+      b {
+        @include fontSize(16px, 16px, 900);
+      }
+      span {
+        @include fontSize(10px, 10px, 700);
+      }
+    }
+    //card
+    &__card-group {
+      padding-left: 5px;
+      row-gap: 10px;
+    }
+    &__card {
+      height: max-content;
+      @include fontSize(12px, 12px, 400);
+      gap: 7px;
+      img {
+        width: 25px;
+        height: auto;
+      }
+      .txt-card-uper {
+        @include fontSize(12px, 12px, 900);
+      }
+      .sum-sale {
+        @include fontSize(17px, 17px, 900);
+      }
+    }
+    //btn
+    &__btn-group {
+      padding-left: 5px;
+      gap: 12px;
+    }
+    &__btn {
+      padding: 10px 15px;
+      @include fontSize(14px, 14px, 500);
+      b {
+        font-weight: 800 !important;
+      }
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+    //повернутый текст
+    &__model-car {
+      right: -5px;
+      width: 60px;
+      .model-car-text {
+        font-size: 70px;
+        line-height: 67px;
+      }
+    }
+  }
+  //-----СЛАЙДЕР ФОТОГРАФИЙ ----
+  .photo-slider {
+    &__item {
+      img {
+        width: 90px;
+        height: auto;
+        margin: 5px 0px;
+        border-radius: 10px;
+      }
+    }
+    /*
+    //----стрелки----
+    .slick-arrow {
+      width: 28px;
+      height: 20px;
+      margin: 0px 0px 0px -14px;
+    }
+    //-стрелка вверх-
+    .slick-arrow.slick-prev {
+      top: -20px;
+    }
+    //-стрелка вниз-
+    .slick-arrow.slick-next {
+      bottom: -20px;
+    }
+    */
+  }
+  //-----------СЛАЙДЕР ЦВЕТА АВТО--------
+  .car-slider {
+    width: 280px;
+    margin-top: -5px;
+    //лейбл гарантии и кнопка коиплектации
+    &__group-btn {
+      gap: 15px;
+      padding: 0px 0px 10px 6px;
+      align-items: start;
+    }
+    &__label {
+      width: 100px;
+      height: auto;
+    }
+    //КНОПКА ПОДБОР КОМПЛЕКТАЦИИ
+    &__btn {
+      @include fontSize(12px, 14px, 600);
+      &:hover > .car-slider__btn-img-group {
+        left: 2px;
+      }
+    }
+    &__btn-img-group {
+      margin-top: 5px;
+      left: -60px;
+      gap: 20px;
+    }
+    /*
+    &__btn-img-car {
+      width: 40px;
+    }
+    &__btn-img-arrow {
+      width: 30px;
+      height: 25px;
+    }*/
+    //фото авто
+    &__car-photo {
+      width: 280px;
+    }
+    //пагинация
+    &__bullet {
+      padding: 5px 0px 0px 10px;
+      .slick-dots li {
+        margin: 0px 7px;
+        padding: 3px;
+      }
+      /*
+      .slick-dots button {
+        width: 20px;
+        height: 20px;
+      }*/
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .header {
+  grid-area: header;
   width: 100%;
   height: max-content;
   padding: 20px 0px;
@@ -51,5 +52,154 @@
     padding: 10px 30px;
     @include fontSize(14px, 14px, 500);
     cursor: pointer;
+    &:hover {
+      background-color: $btnBlueColor;
+      color: $whiteColor;
+      border-color: $blackColor;
+    }
+  }
+}
+
+//
+//------------------------
+//------------------------
+//------------------------
+//------------------------
+//
+//----------MEDIA--------------
+@media (max-width: 1480px) {
+  .header {
+    padding: 20px 0px;
+    &__logo {
+      img {
+        width: 120px;
+        height: 25px;
+      }
+    }
+    &__line-logo {
+      margin: 0px 10px;
+    }
+    &__phone-container {
+      @include fontSize(15px, 15px, bold);
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 4px;
+      }
+    }
+    &__btn {
+      padding: 7px 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    // padding: 20px 0px;
+    &__container {
+      flex-wrap: wrap;
+      row-gap: 5px;
+      position: relative;
+    }
+    &__logo {
+      order: 3;
+      img {
+        width: 140px;
+        height: 35px;
+      }
+    }
+    &__line-logo {
+      margin: 0px 10px;
+    }
+    &__address {
+      order: 1;
+      width: 215px;
+      height: 100%;
+      position: relative;
+      left: 0;
+      gap: 5px;
+      @include fontSize(0px, 0px, 500);
+      img {
+        // width: 14px;
+        // height: 20px;
+        margin-right: 27px;
+      }
+    }
+    &__phone-container {
+      order: 2;
+      width: 200px;
+      height: 100%;
+      position: absolute;
+      left: 40px;
+      justify-content: start;
+      @include fontSize(0px, 0px, bold);
+      img {
+        width: 18px;
+        height: 20px;
+        margin-right: 7px;
+      }
+    }
+    &__btn {
+      margin-left: 68px;
+      order: 4;
+      padding: 7px 20px;
+      // @include fontSize(14px, 14px, 500);
+    }
+  }
+  .header__address-img:hover + .header__address-text {
+    @include fontSize(12px, 12px, 500);
+  }
+  .header__phone-img:hover + .header__phone-text {
+    @include fontSize(15px, 15px, bold);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0px;
+    &__container {
+      height: 36px;
+      flex-wrap: nowrap;
+      row-gap: 0px;
+    }
+    &__logo {
+      img {
+        width: 100px;
+        height: auto;
+      }
+    }
+    &__line-logo {
+      margin: 0px 5px;
+    }
+    &__address {
+      width: 120px;
+      gap: 5px;
+      img {
+        width: 12px;
+        height: 20px;
+        margin-right: 27px;
+      }
+    }
+    &__phone-container {
+      width: 105px;
+      left: 30px;
+      @include fontSize(0px, 0px, bold);
+      img {
+        width: 16px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+    &__btn {
+      margin-left: 23px;
+      padding: 4px 6px;
+      @include fontSize(11px, 14px, 500);
+    }
+  }
+  .header__address-img:hover + .header__address-text {
+    @include fontSize(9px, 9px, 500);
+  }
+  .header__phone-img:hover + .header__phone-text {
+    @include fontSize(9.5px, 11px, bold);
   }
 }
