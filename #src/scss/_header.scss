@@ -1,63 +1,64 @@
 .header {
-  grid-area: header;
-  width: 100%;
-  height: max-content;
-  padding: 20px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $whiteColor;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $navBlockColor;
-  }
-  &__logo {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 174px;
-      height: 33px;
-    }
-  }
-  &__line-logo {
-    margin: 0px 25px;
-    border: 1px solid $navBlockColor;
-  }
-  &__address {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    @include fontSize(12px, 12px, 500);
-    img {
-      width: 14px;
-      height: 20px;
-    }
-  }
-  &__phone-container {
+    grid-area: header;
+    width: 100%;
+    height: max-content;
+    padding: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include fontSize(16px, 16px, bold);
-    img {
-      width: 20px;
-      height: 20px;
-      margin-right: 4px;
+    background-color: $whiteColor;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $navBlockColor;
     }
-  }
-  &__btn {
-    border: 1px solid $btnBlueColor;
-    color: $btnBlueColor;
-    padding: 10px 30px;
-    @include fontSize(14px, 14px, 500);
-    cursor: pointer;
-    &:hover {
-      background-color: $btnBlueColor;
-      color: $whiteColor;
-      border-color: $blackColor;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 174px;
+            height: 33px;
+        }
     }
-  }
+    &__line-logo {
+        width: 2px;
+        margin: 0px 25px;
+        background-color: $navBlockColor;
+    }
+    &__address {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        @include fontSize(12px, 12px, 500);
+        img {
+            width: 14px;
+            height: 20px;
+        }
+    }
+    &__phone-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include fontSize(16px, 16px, bold);
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 4px;
+        }
+    }
+    &__btn {
+        border: 1px solid $btnBlueColor;
+        color: $btnBlueColor;
+        padding: 10px 30px;
+        @include fontSize(14px, 14px, 500);
+        cursor: pointer;
+        &:hover {
+            background-color: $btnBlueColor;
+            color: $whiteColor;
+            border-color: $blackColor;
+        }
+    }
 }
 
 //
@@ -68,138 +69,217 @@
 //
 //----------MEDIA--------------
 @media (max-width: 1480px) {
-  .header {
-    padding: 20px 0px;
-    &__logo {
-      img {
-        width: 120px;
-        height: 25px;
-      }
+    .header {
+        padding: 20px 0px;
+        &__logo {
+            img {
+                width: 120px;
+                height: 25px;
+            }
+        }
+        &__line-logo {
+            margin: 0px 10px;
+        }
+        &__phone-container {
+            @include fontSize(15px, 15px, bold);
+            img {
+                width: 15px;
+                height: 15px;
+                margin-right: 4px;
+            }
+        }
+        &__btn {
+            padding: 7px 20px;
+        }
     }
-    &__line-logo {
-      margin: 0px 10px;
-    }
-    &__phone-container {
-      @include fontSize(15px, 15px, bold);
-      img {
-        width: 15px;
-        height: 15px;
-        margin-right: 4px;
-      }
-    }
-    &__btn {
-      padding: 7px 20px;
-    }
-  }
 }
 
 @media (max-width: 1024px) {
-  .header {
-    // padding: 20px 0px;
-    &__container {
-      flex-wrap: wrap;
-      row-gap: 5px;
-      position: relative;
+    .header {
+        // padding: 20px 0px;
+        &__container {
+            flex-wrap: wrap;
+            row-gap: 5px;
+            position: relative;
+        }
+        &__logo {
+            order: 3;
+            img {
+                width: 140px;
+                height: 35px;
+            }
+        }
+        &__line-logo {
+            margin: 0px 10px;
+        }
+        &__address {
+            order: 1;
+            width: 215px;
+            height: 100%;
+            position: relative;
+            left: 0;
+            gap: 5px;
+            @include fontSize(0px, 0px, 500);
+            img {
+                // width: 14px;
+                // height: 20px;
+                margin-right: 27px;
+            }
+        }
+        &__phone-container {
+            order: 2;
+            width: 200px;
+            height: 100%;
+            position: absolute;
+            left: 40px;
+            justify-content: start;
+            @include fontSize(0px, 0px, bold);
+            img {
+                width: 18px;
+                height: 20px;
+                margin-right: 7px;
+            }
+        }
+        &__btn {
+            margin-left: 68px;
+            order: 4;
+            padding: 7px 20px;
+            // @include fontSize(14px, 14px, 500);
+        }
     }
-    &__logo {
-      order: 3;
-      img {
-        width: 140px;
-        height: 35px;
-      }
+    .header__address-img:hover+.header__address-text {
+        @include fontSize(12px, 12px, 500);
     }
-    &__line-logo {
-      margin: 0px 10px;
+    .header__phone-img:hover+.header__phone-text {
+        @include fontSize(15px, 15px, bold);
     }
-    &__address {
-      order: 1;
-      width: 215px;
-      height: 100%;
-      position: relative;
-      left: 0;
-      gap: 5px;
-      @include fontSize(0px, 0px, 500);
-      img {
-        // width: 14px;
-        // height: 20px;
-        margin-right: 27px;
-      }
-    }
-    &__phone-container {
-      order: 2;
-      width: 200px;
-      height: 100%;
-      position: absolute;
-      left: 40px;
-      justify-content: start;
-      @include fontSize(0px, 0px, bold);
-      img {
-        width: 18px;
-        height: 20px;
-        margin-right: 7px;
-      }
-    }
-    &__btn {
-      margin-left: 68px;
-      order: 4;
-      padding: 7px 20px;
-      // @include fontSize(14px, 14px, 500);
-    }
-  }
-  .header__address-img:hover + .header__address-text {
-    @include fontSize(12px, 12px, 500);
-  }
-  .header__phone-img:hover + .header__phone-text {
-    @include fontSize(15px, 15px, bold);
-  }
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 10px 0px;
-    &__container {
-      height: 36px;
-      flex-wrap: nowrap;
-      row-gap: 0px;
+    .header {
+        padding: 10px 0px;
+        &__container {
+            height: 36px;
+            flex-wrap: nowrap;
+            row-gap: 0px;
+        }
+        &__logo {
+            img {
+                width: 100px;
+                height: auto;
+            }
+        }
+        &__line-logo {
+            margin: 0px 5px;
+        }
+        &__address {
+            width: 120px;
+            gap: 5px;
+            img {
+                width: 12px;
+                height: 20px;
+                margin-right: 27px;
+            }
+        }
+        &__phone-container {
+            width: 105px;
+            left: 30px;
+            @include fontSize(0px, 0px, bold);
+            img {
+                width: 16px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+        &__btn {
+            margin-left: 23px;
+            padding: 4px 6px;
+            @include fontSize(11px, 14px, 500);
+        }
     }
-    &__logo {
-      img {
-        width: 100px;
-        height: auto;
-      }
+    .header__address-img:hover+.header__address-text {
+        @include fontSize(9px, 9px, 500);
     }
-    &__line-logo {
-      margin: 0px 5px;
+    .header__phone-img:hover+.header__phone-text {
+        @include fontSize(9.5px, 11px, bold);
     }
-    &__address {
-      width: 120px;
-      gap: 5px;
-      img {
-        width: 12px;
-        height: 20px;
-        margin-right: 27px;
-      }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 0px;
+        &__container {
+            height: max-content;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+        &__logo {
+            width: 65%;
+            order: 1;
+            img {
+                width: 43%;
+                height: auto;
+            }
+        }
+        &__line-logo {
+            width: 1px !important;
+            margin: 0px 10px;
+        }
+        &__address {
+            order: 3;
+            width: max-content;
+            height: max-content;
+            position: relative;
+            left: 0;
+            gap: 5px;
+            @include fontSize(10px, 11px, 500);
+            img {
+                margin-right: 5px;
+            }
+        }
+        &__phone-container {
+            order: 4;
+            width: max-content;
+            height: max-content;
+            bottom: 1px;
+            left: unset;
+            right: 7px;
+            justify-content: start;
+            @include fontSize(11px, 11px, bold);
+            img {
+                order: 2;
+                width: 18px;
+                height: 20px;
+                margin-left: 5px;
+                margin-right: unset;
+            }
+        }
+        &__btn {
+            margin-left: 0px;
+            order: 2;
+            padding: 5px 10px;
+            @include fontSize(13px, 13px, 500);
+        }
     }
-    &__phone-container {
-      width: 105px;
-      left: 30px;
-      @include fontSize(0px, 0px, bold);
-      img {
-        width: 16px;
-        height: 20px;
-        margin-right: 5px;
-      }
+    .header__address-img:hover+.header__address-text {
+        @include fontSize(inherit, inherit, 500);
     }
-    &__btn {
-      margin-left: 23px;
-      padding: 4px 6px;
-      @include fontSize(11px, 14px, 500);
+    .header__phone-img:hover+.header__phone-text {
+        @include fontSize(inherit, inherit, bold);
     }
-  }
-  .header__address-img:hover + .header__address-text {
-    @include fontSize(9px, 9px, 500);
-  }
-  .header__phone-img:hover + .header__phone-text {
-    @include fontSize(9.5px, 11px, bold);
-  }
+}
+
+@media (max-width: 360px) {
+    .header {
+        &__logo {
+            width: 60%;
+            order: 1;
+        }
+        &__btn {
+            margin-left: 0px;
+            order: 2;
+            padding: 5px 7px;
+            @include fontSize(12px, 13px, 500);
+        }
+    }
 }

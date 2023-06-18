@@ -16,42 +16,32 @@ $blueBullet: #49b6d0;
 $blackBullet: #696969;
 //----------
 //-шрифты-
-$fontFamilyBase: 'Open Sans', sans-serif;
+$fontFamilyBase: 'Open Sans',
+sans-serif;
 //-----------------------------------------------миксины----------------------------------------------
 //вставка изображения как фона(без ссылки на изображение)
 @mixin bgImg($bgImSize: 100% 100%, $bgPosition: center, $bgRepeat: no-repeat) {
-  background-size: $bgImSize;
-  background-position: $bgPosition;
-  background-repeat: $bgRepeat;
+    background-size: $bgImSize;
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
 }
 
 //параметры шрифтов
 @mixin fontSize($fs: 16px, $liHe: 24px, $fWe: 400) {
-  font-size: $fs;
-  font-weight: $fWe;
-  line-height: $liHe;
-  font-style: normal;
+    font-size: $fs;
+    font-weight: $fWe;
+    line-height: $liHe;
+    font-style: normal;
 }
 
 @mixin textBorderSmokeColor {
-  text-shadow: -0 -0.5px 0.5px $blueBullet, 0 -0.5px 0.5px $blueBullet,
-    -0 0.5px 0.5px $blueBullet, 0 0.5px 0.5px $blueBullet,
-    -0.5px -0 0.5px $blueBullet, 0.5px -0 0.5px $blueBullet,
-    -0.5px 0 0.5px $blueBullet, 0.5px 0 0.5px $blueBullet,
-    -0.5px -0.5px 0.5px $blueBullet, 0.5px -0.5px 0.5px $blueBullet,
-    -0.5px 0.5px 0.5px $blueBullet, 0.5px 0.5px 0.5px $blueBullet,
-    -0.5px -0.5px 0.5px $blueBullet, 0.5px -0.5px 0.5px $blueBullet,
-    -0.5px 0.5px 0.5px $blueBullet, 0.5px 0.5px 0.5px $blueBullet;
+    text-shadow: -0 -0.5px 0.5px $blueBullet, 0 -0.5px 0.5px $blueBullet, -0 0.5px 0.5px $blueBullet, 0 0.5px 0.5px $blueBullet, -0.5px -0 0.5px $blueBullet, 0.5px -0 0.5px $blueBullet, -0.5px 0 0.5px $blueBullet, 0.5px 0 0.5px $blueBullet, -0.5px -0.5px 0.5px $blueBullet, 0.5px -0.5px 0.5px $blueBullet, -0.5px 0.5px 0.5px $blueBullet, 0.5px 0.5px 0.5px $blueBullet, -0.5px -0.5px 0.5px $blueBullet, 0.5px -0.5px 0.5px $blueBullet, -0.5px 0.5px 0.5px $blueBullet, 0.5px 0.5px 0.5px $blueBullet;
 }
 
 @mixin textBorderBlack {
-  text-shadow: -0 -1px 1px $blackColor, 0 -1px 1px $blackColor,
-    -0 1px 1px $blackColor, 0 1px 1px $blackColor, -1px -0 1px $blackColor,
-    1px -0 1px $blackColor, -1px 0 1px $blackColor, 1px 0 1px $blackColor,
-    -1px -1px 1px $blackColor, 1px -1px 1px $blackColor,
-    -1px 1px 1px $blackColor, 1px 1px 1px $blackColor, -1px -1px 1px $blackColor,
-    1px -1px 1px $blackColor, -1px 1px 1px $blackColor, 1px 1px 1px $blackColor;
+    text-shadow: -0 -1px 1px $blackColor, 0 -1px 1px $blackColor, -0 1px 1px $blackColor, 0 1px 1px $blackColor, -1px -0 1px $blackColor, 1px -0 1px $blackColor, -1px 0 1px $blackColor, 1px 0 1px $blackColor, -1px -1px 1px $blackColor, 1px -1px 1px $blackColor, -1px 1px 1px $blackColor, 1px 1px 1px $blackColor, -1px -1px 1px $blackColor, 1px -1px 1px $blackColor, -1px 1px 1px $blackColor, 1px 1px 1px $blackColor;
 }
+
 
 /*
 //флекс элемент по центру
