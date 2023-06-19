@@ -1,7 +1,7 @@
 $(document).ready(function() {
     /*-------Start------*/
-
-    //----fancybox
+    alert('Работает смена моделей авто с фото')
+        //----fancybox
     $('.advertising-form-block').fancybox({
         "hideOnOverlayClick": true,
         "overlayShow": true,
@@ -106,7 +106,18 @@ $(document).ready(function() {
         $(this).addClass('active-nav-link');
         var textModelBtn = $(this).text();
         $('.model-car-text').text(textModelBtn)
+            //--меняем фото в зависимости от модели--
+        var galeryAllPhotoCar = $('.car-splice')
+        $.each(galeryAllPhotoCar, function(i, key) {
+            var galeryPhotoCarAttr = key.getAttribute('src');
+            var galeryPhotoCarArrSplit = galeryPhotoCarAttr.split('/');
+            galeryPhotoCarArrSplit.splice(1, 1, textModelBtn);
+            var nevSrcGaleryPhotoCar = galeryPhotoCarArrSplit.join('/');
+            key.setAttribute('src', nevSrcGaleryPhotoCar);
 
+        })
+        $('.photo-slider').slick('setPosition');
+        $('.car-slider').slick('setPosition');
     })
 
     //------------------------------
