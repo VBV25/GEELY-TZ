@@ -50,7 +50,7 @@
     }
     //--блок формы
     &__form-block {
-        display: flex;
+        display: flex !important;
         gap: 100px;
     }
     //форма
@@ -94,6 +94,7 @@
         img {
             width: 40px;
             height: 25px;
+            margin-left: 5px;
             filter: invert(1);
         }
         &:hover {

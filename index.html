@@ -22,22 +22,22 @@
 
     <!--'ХЕДЕР'-->
 <header class="header">
-  <div class="header__container container">
-    <div class="header__logo">
-      <img src="img/svg/geely-logo.svg" alt="GEELY">
-      <div class="header__line-logo"></div>
-      <img src="img/orbis.jpg" alt="Orbis AUTO">
+    <div class="header__container container">
+        <div class="header__logo">
+            <img src="img/svg/geely-logo.svg" alt="GEELY">
+            <div class="header__line-logo"></div>
+            <img src="img/orbis.jpg" alt="Orbis AUTO">
+        </div>
+        <div class="header__address">
+            <img class="header__address-img" src="img/svg/map-mark.svg" alt="map">
+            <p class="header__address-text">GEELY SHYMKENT<br>Тамерлановское шоссе 90Б.</p>
+        </div>
+        <div class="header__phone-container">
+            <img class="header__phone-img" src="img/svg/phone.svg" alt="&#9990">
+            <p class="header__phone-text">+7(778) 003-76-86</p>
+        </div>
+        <a href="#advertisingFormBlock" class="header__btn advertising-form-block">Заказать звонок</a>
     </div>
-    <div class="header__address">
-      <img class="header__address-img" src="img/svg/map-mark.svg" alt="map">
-      <p class="header__address-text">GEELY SHYMKENT<br>Тамерлановское шоссе 90Б.</p>
-    </div>
-    <div class="header__phone-container">
-      <img class="header__phone-img" src="img/svg/phone.svg" alt="&#9990">
-      <p class="header__phone-text">+7(778) 003-76-86</p>
-    </div>
-    <div class="header__btn">Заказать звонок</div>
-  </div>
 </header>
     <main>
         <h1>GEELY с выгодой 3 000 000 &#8376;</h1>
@@ -59,57 +59,58 @@
         <nav class="navigation-block__menu">
             <div class="navigation-block__btn-exit">ВЫХОД</div>
             <img class="navigation-block__logo" src="img/svg/geely-logo-white.svg" alt="">
-            <li class="navigation-block__link menu-link active-nav-link">Подбор комплектации</li>
-            <li class="navigation-block__link menu-link">Трейд-ин</li>
-            <li class="navigation-block__link menu-link">Кредит</li>
-            <li class="navigation-block__link menu-link">Тест-драйв</li>
-            <li class="navigation-block__link menu-link">Контакты</li>
+            <a href="#advertisingFormBlock" class="navigation-block__link  advertising-form-block">Подбор
+                комплектации</a>
+            <a href="#advertisingFormBlock" class="navigation-block__link advertising-form-block">Трейд-ин</a>
+            <a href="#advertisingFormBlock" class="navigation-block__link  advertising-form-block">Кредит</a>
+            <a href="#advertisingFormBlock" class="navigation-block__link  advertising-form-block">Тест-драйв</a>
+            <a href="#advertisingContacts" class="navigation-block__link  advertising-form-block">Контакты</a>
         </nav>
     </div>
 </section>
         <!--'РЕКЛАМНЫЙ БЛОК'-->
 <section class="advertising-block">
-  <div class="advertising-block__bg"><img id="banner" src="img/banner1.jpg" alt=""></div>
-  <div class="advertising-block__container container">
-    <!--'ТЕКСТОВЫЙ блок'-->
-    <div class="advertising-block__text-wrapper">
-      <h2 class="advertising-block__title ">GEELY с выгодой <span>3 000 000 </span><span>&#8376;</span></h2>
-      <p class="advertising-block__subtitle ">Рассрочка на 1 год &mdash; 0% <br>Кредит на 2 года ставка &mdash; 10%
-        <br>Кредит на 5 лет ставка &mdash; 15.5% <br>
-      </p>
+    <div class="advertising-block__bg"><img id="banner" src="img/banner1.jpg" alt=""></div>
+    <div class="advertising-block__container container">
+        <!--'ТЕКСТОВЫЙ блок'-->
+        <div class="advertising-block__text-wrapper">
+            <h2 class="advertising-block__title ">GEELY с выгодой <span>3 000 000 </span><span>&#8376;</span></h2>
+            <p class="advertising-block__subtitle ">Рассрочка на 1 год &mdash; 0% <br>Кредит на 2 года ставка &mdash; 10%
+                <br>Кредит на 5 лет ставка &mdash; 15.5% <br>
+            </p>
+        </div>
+        <!--'Блок миниформы'-->
+        <div class="advertising-block__form-block">
+            <form class="advertising-block__form">
+                <!--'телефон'-->
+                <p>Успейте забронировать!</p>
+                <input type="phone" placeholder="Номер телефона" id="phone" required>
+                <!--'кнопка отправки'-->
+                <button class="advertising-block__btn-form" type="submit" id="btnForm">Получить предложение
+                    <img src="img/svg/arrow-btn.svg" alt=""></button>
+                <!--'чекбокс'-->
+                <div class="advertising-block__checkbox">
+
+                    <input id="formAgreement" checked type="checkbox" name="agreement" class="advertising-block__checkbox-input">
+                    <label for="formAgreement" class="advertising-block__checkbox-label">Согласие на <span
+                            class="advertising-block__link"> обработку персональных данных</span>
+                    </label>
+
+                </div>
+            </form>
+            <!--'лейбл расрочки'-->
+            <div class="advertising-block__label-wrapper">
+                <div class="advertising-block__section">
+                    <p>Честная</p>
+                    <p>Рассрочка</p>
+                </div>
+                <div class="advertising-block__section">
+                    <p>0.01<span>%</span></p>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <!--'Блок миниформы'-->
-    <div class="advertising-block__form-block">
-      <form class="advertising-block__form">
-        <!--'телефон'-->
-        <p>Успейте забронировать!</p>
-        <input type="phone" placeholder="Номер телефона" id="phone" required>
-        <!--'кнопка отправки'-->
-        <button class="advertising-block__btn-form" type="button" id="btnForm">Получить предложение
-          <img src="img/svg/arrow-btn.svg" alt=""></button>
-        <!--'чекбокс'-->
-        <div class="advertising-block__checkbox">
-
-          <input id="formAgreement" checked type="checkbox" name="agreement" class="advertising-block__checkbox-input">
-          <label for="formAgreement" class="advertising-block__checkbox-label">Согласие на <span
-              class="advertising-block__link"> обработку персональных данных</span>
-          </label>
-
-        </div>
-      </form>
-      <!--'лейбл расрочки'-->
-      <div class="advertising-block__label-wrapper">
-        <div class="advertising-block__section">
-          <p>Честная</p>
-          <p>Рассрочка</p>
-        </div>
-        <div class="advertising-block__section">
-          <p>0.01<span>%</span></p>
-
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
         <section class="info-block">
     <div class="info-block__bg" id="infoBlockImgBg"><img src="img/bg.jpg" alt=""></div>
@@ -118,59 +119,43 @@
         <div class=" info-block__photo-slider photo-slider">
 
             <div class="photo-slider__item">
-                <img src="img/car/interier/1.jpg" alt="car">
+                <img src="img/coolray/interier/1.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/interier/2.jpg" alt="car">
+                <img src="img/coolray/interier/2.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/interier/3.jpg" alt="car">
+                <img src="img/coolray/interier/3.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/interier/4.jpg" alt="car">
+                <img src="img/coolray/interier/4.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/interier/5.jpg" alt="car">
+                <img src="img/coolray/interier/5.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/exterier/1.jpg" alt="car">
+                <img src="img/coolray/exterier/1.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/exterier/2.jpg" alt="car">
+                <img src="img/coolray/exterier/2.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/exterier/3.jpg" alt="car">
+                <img src="img/coolray/exterier/3.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/exterier/4.jpg" alt="car">
+                <img src="img/coolray/exterier/4.jpg" alt="car">
             </div>
 
             <div class="photo-slider__item">
-                <img src="img/car/exterier/5.jpg" alt="car">
-            </div>
-
-            <div class="photo-slider__item">
-                <img src="img/car/exterier/6.jpg" alt="car">
-            </div>
-
-            <div class="photo-slider__item">
-                <img src="img/car/exterier/7.jpg" alt="car">
-            </div>
-
-            <div class="photo-slider__item">
-                <img src="img/car/exterier/8.jpg" alt="car">
-            </div>
-
-            <div class="photo-slider__item">
-                <img src="img/car/exterier/9.jpg" alt="car">
+                <img src="img/coolray/exterier/5.jpg" alt="car">
             </div>
         </div>
         <!----------'Слайдер-авто'------------->
@@ -185,16 +170,16 @@
                             <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
                         </div>
                         <!--'Кнопка '-->
-                        <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+                        <button class="car-slider__btn btn-equipment advertising-form-block" href="#advertisingFormBlock" type="button">Подобрать<br>Комплектацию<br>
                             <div class="car-slider__btn-img-group">
-                                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                                <img class="car-slider__btn-img-car" src="img/coolray/mini-car.png" alt="">
                                 <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
                             </div>
                         </button>
                     </div>
                     <!--'фото активного авто'-->
                     <div class="car-slider__car-photo">
-                        <img data-lazy="img/car/1.png" alt="car">
+                        <img class="car-splice" src="img/coolray/1.png" alt="car">
                     </div>
                 </div>
                 <!--'2слайд'-->
@@ -206,16 +191,16 @@
                             <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
                         </div>
                         <!--'Кнопка '-->
-                        <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+                        <button class="car-slider__btn btn-equipment advertising-form-block" href="#advertisingFormBlock" type="button">Подобрать<br>Комплектацию<br>
                             <div class="car-slider__btn-img-group">
-                                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                                <img class="car-slider__btn-img-car" src="img/coolray/mini-car.png" alt="">
                                 <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
                             </div>
                         </button>
                     </div>
                     <!--'фото активного авто'-->
                     <div class="car-slider__car-photo">
-                        <img data-lazy="img/car/2.png" alt="car">
+                        <img class="car-splice" src="img/coolray/2.png" alt="car">
                     </div>
                 </div>
                 <!--'3слайд'-->
@@ -227,16 +212,16 @@
                             <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
                         </div>
                         <!--'Кнопка '-->
-                        <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+                        <button class="car-slider__btn btn-equipment advertising-form-block" href="#advertisingFormBlock" type="button">Подобрать<br>Комплектацию<br>
                             <div class="car-slider__btn-img-group">
-                                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                                <img class="car-slider__btn-img-car" src="img/coolray/mini-car.png" alt="">
                                 <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
                             </div>
                         </button>
                     </div>
                     <!--'фото активного авто'-->
                     <div class="car-slider__car-photo">
-                        <img data-lazy="img/car/3.png" alt="car">
+                        <img data-lazy="img/coolray/3.png" alt="car">
                     </div>
                 </div>
                 <!--'4слайд'-->
@@ -248,16 +233,16 @@
                             <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
                         </div>
                         <!--'Кнопка '-->
-                        <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+                        <button class="car-slider__btn btn-equipment advertising-form-block" href="#advertisingFormBlock" type="button">Подобрать<br>Комплектацию<br>
                             <div class="car-slider__btn-img-group">
-                                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                                <img class="car-slider__btn-img-car" src="img/coolray/mini-car.png" alt="">
                                 <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
                             </div>
                         </button>
                     </div>
                     <!--'фото активного авто'-->
                     <div class="car-slider__car-photo">
-                        <img data-lazy="img/car/4.png" alt="car">
+                        <img data-lazy="img/coolray/4.png" alt="car">
                     </div>
                 </div>
                 <!--'5слайд'-->
@@ -269,16 +254,16 @@
                             <img src="img/svg/label-6yers.svg" alt="6 Лет Гарантии">
                         </div>
                         <!--'Кнопка '-->
-                        <button class="car-slider__btn btn-equipment" type="button">Подобрать<br>Комплектацию<br>
+                        <button class="car-slider__btn btn-equipment advertising-form-block" href="#advertisingFormBlock" type="button">Подобрать<br>Комплектацию<br>
                             <div class="car-slider__btn-img-group">
-                                <img class="car-slider__btn-img-car" src="img/car/mini-car.png" alt="">
+                                <img class="car-slider__btn-img-car" src="img/coolray/mini-car.png" alt="">
                                 <img class="car-slider__btn-img-arrow" src="img/svg/arrow-btn.svg" alt="">
                             </div>
                         </button>
                     </div>
                     <!--'фото активного авто'-->
                     <div class="car-slider__car-photo">
-                        <img data-lazy="img/car/5.png" alt="car">
+                        <img data-lazy="img/coolray/5.png" alt="car">
                     </div>
                 </div>
             </div>
@@ -320,15 +305,15 @@
         <!--'блок кнопок'-->
         <div class="info-block__btn-group">
             <!--'1'-->
-            <button class="info-block__btn " id="btnTestDrive" type="button">
+            <button class="info-block__btn advertising-form-block" href="#advertisingFormBlock" id="btnTestDrive">
                 <p>Записаться на тестдрайв</p> <img src="img/svg/arrow-btn.svg" alt="">
             </button>
             <!--'2'-->
-            <button class="info-block__btn " id="btnInstallment" type="button">
+            <button class="info-block__btn advertising-form-block" href="#advertisingFormBlock" id="btnInstallment" type="button">
                 <p>Частная рассрочка <b>0.01%</b></p> <img src="img/svg/arrow-btn.svg" alt="">
             </button>
             <!--'3'-->
-            <button class="info-block__btn " id="btnPrice" type="button">
+            <button class="info-block__btn advertising-form-block" href="#advertisingFormBlock" id="btnPrice" type="button">
                 <p>Узнать цену</p> <img src="img/svg/arrow-btn.svg" alt="">
             </button>
         </div>
@@ -343,9 +328,43 @@
 
 
     <!--'POPUP'-->
+    <section class="form-popup" id="advertisingFormBlock" style="display: none;">
+    <form class="form-popup__form-container">
+        <!--'заголовок'-->
+        <p class="form-popup__title" id="formPopupTitle">Связаться с нами!</p>
+        <!--'изображения'-->
+        <div class="form-popup__img-group">
+            <div class="form-popup__label">
+                <img src="img/svg/geely-logo-white.svg" alt="Label">
+                <img src="img/svg/label-6yers.svg" alt="Label">
+            </div>
+            <div class="form-popup__car-photo">
+                <img src="img/coolray/2.png" alt="Car-photo">
+            </div>
+        </div>
+        <!--'телефон'-->
+        <div class="form-popup__input-block">
+            <input class="form-popup__phone-input" type="phone" placeholder="Номер телефона" id="phonePopup" required>
+            <div class="form-popup__err-massage">11</div>
+        </div>
+        <!--'кнопка отправки'-->
+        <button class="form-popup__btn-form" type="submit" id="btnFormPopup">Отправить
+        </button>
+        <!--'чекбокс'-->
+        <div class="form-popup__checkbox">
+            <input id="formAgreement" checked type="checkbox" name="agreement" class="form-popup__checkbox-input">
+            <label for="formAgreement" class="form-popup__checkbox-label">Согласие на <span class="form-popup__link">
+                    обработку персональных данных</span>
+            </label>
+
+        </div>
+    </form>
+
+</section>
     <!--'Script'-->
     <script src="libs/slick.min.js"></script>
     <script src="libs/jquery.fancybox.min.js"></script>
+    <!--<script src="libs/jquery.fancybox-1.3.4.pack.js"></script>-->
     <script src="libs/jquery.maskedinput.min.js"></script>
     <script src="js/index.js"></script>
 </body>

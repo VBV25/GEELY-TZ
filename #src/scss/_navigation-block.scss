@@ -26,6 +26,7 @@
         @include fontSize(13px, 13px, 500);
     }
     &__link {
+        color: $whiteColor;
         list-style: none;
         cursor: pointer;
         &:hover {

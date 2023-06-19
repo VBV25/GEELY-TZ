@@ -1,0 +1,223 @@
+.form-popup {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    //обертка формы
+    &__form-container {
+        width: 400px;
+        display: grid;
+        grid-template-areas: 'title' 'group-img' 'input' 'btn' 'checkbox';
+        // grid-template-columns: 1fr;
+        grid-template-rows: repeat(5 max-content);
+        row-gap: 20px;
+        justify-content: center;
+    }
+    //заголовок
+    &__title {
+        display: block;
+        width: max-content;
+        grid-area: title;
+        @include fontSize(30px, 40px, 800);
+        color: $whiteColor;
+        margin: auto;
+    }
+    //группа изображений
+    &__img-group {
+        grid-area: group-img;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
+    //фото авто
+    &__car-photo {
+        grid-area: car-photo;
+        width: 60%;
+        height: max-content;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    //лейбл гарантии
+    &__label {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    //--части формы
+    &__phone-input,
+    &__btn-form {
+        height: 56px;
+        min-width: max-content;
+        width: 100%;
+        margin: auto;
+        padding: 20px 25px;
+        @include fontSize(20px, 20px, unset);
+    }
+    //ввод телефона
+    &__input-block {
+        grid-area: input;
+    }
+    &__phone-input {
+        border: 2px solid $whiteColor;
+        &:hover {
+            border: 2px solid $btnBlueColor;
+        }
+        &:focus {
+            border: 2px solid $blueBullet;
+        }
+    }
+    &__err-massage {
+        width: 100%;
+        height: 15px;
+        font-size: 15px;
+        padding-top: 5px;
+        color: $errMessage;
+        text-align: center;
+    }
+    //кнопка
+    &__btn-form {
+        grid-area: btn;
+        text-align: center;
+        text-transform: uppercase;
+        color: $whiteColor;
+        background-color: $btnBlueDarkColor;
+        &:hover {
+            background-color: $btnBlueColor;
+        }
+    }
+    //согласие блок
+    &__checkbox {
+        grid-area: checkbox;
+        width: max-content;
+        color: $whiteColor;
+    }
+    &__checkbox-input {
+        grid-area: unset !important;
+        display: none;
+    }
+    &__checkbox-label {
+        position: relative;
+        display: flex;
+        @include fontSize(14px, 16px, unset);
+        &:before {
+            content: '';
+            align-self: flex-start;
+            width: 15px;
+            height: 15px;
+            padding-left: 2px;
+            margin-right: 5px;
+            @include fontSize(13px, 13px, unset);
+            border: 1px solid $whiteColor;
+            cursor: pointer;
+        }
+    }
+    &__checkbox-input:checked+&__checkbox-label::before {
+        content: ' ✓';
+    }
+    &__link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+//-----фансибокс стили--
+.fancybox-content {
+    background-color: $navBlockColor !important;
+}
+
+.fancybox-close-small {
+    color: $smokeColor !important;
+    &:hover {
+        color: $blueBullet !important;
+    }
+}
+
+//------------------------
+//------------------------
+//------------------------
+//----------MEDIA--------------
+@media (max-width: 520px) {
+    .form-popup {
+        //обертка формы
+        &__form-container {
+            width: 250px;
+            row-gap: 10px;
+        }
+        //заголовок
+        &__title {
+            margin-bottom: 10px;
+            //  @include fontSize(20px, 40px, 800);
+        }
+        //группа изображений
+        &__img-group {
+            grid-area: group-img;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        //фото авто
+        &__car-photo {
+            width: 80%;
+        }
+        //лейбл гарантии
+        &__label {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            img {
+                width: 25%;
+            }
+        }
+        //--части формы
+        &__phone-input,
+        &__btn-form {
+            height: 46px;
+            padding: 10px;
+            // @include fontSize(16px, 16px, unset);
+        }
+        //согласие блок
+        &__checkbox-label {
+            //  @include fontSize(11px, 13px, unset);
+        }
+    }
+    .fancybox-content {
+        padding: 25px 44px !important;
+    }
+}
+
+@media (max-width: 370px) {
+    .form-popup {
+        //обертка формы
+        &__form-container {
+            width: 250px;
+        }
+        //заголовок
+        &__title {
+            margin-bottom: 5px;
+            @include fontSize(20px, 30px, 800);
+        }
+        //--части формы
+        &__phone-input,
+        &__btn-form {
+            height: 30px;
+            padding: 5px;
+            @include fontSize(14px, 14px, unset);
+        }
+        //согласие блок
+        &__checkbox-label {
+            @include fontSize(11px, 13px, unset);
+        }
+    }
+    .fancybox-content {
+        padding: 26px 14px !important;
+    }
+}

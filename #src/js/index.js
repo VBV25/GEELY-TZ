@@ -1,5 +1,18 @@
 $(document).ready(function() {
     /*-------Start------*/
+
+    //----fancybox
+    $('.advertising-form-block').fancybox({
+        "hideOnOverlayClick": true,
+        "overlayShow": true,
+        "overlayOpacity": 0.7,
+
+    })
+
+
+
+
+    //----Слайдеры---
     $('.photo-slider').slick({
         //------свойства слайдера-----
         //---стрелки-
@@ -71,10 +84,9 @@ $(document).ready(function() {
         $(this).addClass('active-nav-link');
         var textModelBtn = $(this).text();
         $('.model-car-text').text(textModelBtn)
+
     })
-    $('.menu-link').click(function() {
-        $('.menu-link').removeClass('active-nav-link');
-        $(this).addClass('active-nav-link');
-    })
+
+    //------------------------------
 
 });

@@ -41,7 +41,7 @@ b {
 }
 
 .active-nav-link {
-    color: $blueBullet;
+    color: $blueBullet !important;
     @include textBorderBlack;
     cursor: default !important;
     &:hover {
@@ -54,7 +54,8 @@ b {
 @import 'navigation-block';
 @import 'advertising-block';
 @import 'info-block';
-//------------------------
+//---------POPUP---------------
+@import 'form-popup';
 //------------------------
 //------------------------
 //------------------------
