@@ -1,7 +1,7 @@
 $(document).ready(function() {
     /*-------Start------*/
-    alert('Работает смена моделей авто с фото')
-        //----fancybox
+
+    //----fancybox
     $('.advertising-form-block').fancybox({
         "hideOnOverlayClick": true,
         "overlayShow": true,
