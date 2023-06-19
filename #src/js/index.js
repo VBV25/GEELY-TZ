@@ -13,6 +13,26 @@ $(document).ready(function() {
 
 
     //----Слайдеры---
+    $('.advertising-block__text-wrapper').slick({
+        //------свойства слайдера-----
+        fade: true,
+        //---стрелки-
+        arrows: false,
+
+        //--скорость пролистывания
+        speed: 1000,
+        //--бесконечность!!!
+        infinite: true,
+        //--свайп мышкой и пальцем
+        draggable: true,
+        swipe: true,
+        touchThreshold: 3,
+        touchMove: true,
+        autoplay: true,
+        autoplaySpeed: 3500,
+
+
+    });
     $('.photo-slider').slick({
         //------свойства слайдера-----
         //---стрелки-
@@ -55,6 +75,8 @@ $(document).ready(function() {
         touchThreshold: 3,
         touchMove: true,
     });
+
+    //
 
     //-----мобильное-меню----
     $('.navigation-block__menu-mobile').click(function() {

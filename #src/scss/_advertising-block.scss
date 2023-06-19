@@ -33,7 +33,17 @@
     }
     //--текстовый блок
     &__text-wrapper {
+        min-width: 0;
         text-align: center;
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-track {
+            display: flex;
+        }
+    }
+    &__slide {
+        cursor: pointer;
     }
     &__title {
         margin-bottom: 30px;
@@ -47,6 +57,10 @@
     }
     &__subtitle {
         @include fontSize(35px, 51px, unset);
+        display: block;
+        min-height: 155px;
+        max-width: 70%;
+        margin: auto;
     }
     //--блок формы
     &__form-block {
@@ -256,6 +270,7 @@
         }
         &__subtitle {
             @include fontSize(30px, 40px, unset);
+            min-height: 140px;
         }
         //--блок формы
         &__form-block {
@@ -439,8 +454,10 @@
         }
         &__subtitle {
             text-align: start;
-            @include fontSize(16px, 22px, unset);
+            min-height: 80px;
+            @include fontSize(16px, 19px, unset);
             @include textBorderBlack;
+            margin: 0;
         }
         //форма
         &__form {
@@ -528,10 +545,12 @@
         &__text-wrapper {
             z-index: 1;
             position: absolute;
-            height: 100%;
             width: 100%;
-            padding: 4% 5px 20%;
-            display: grid;
+        }
+        &__slide {
+            height: 105vw !important;
+            padding: 3% 5px 15vw !important;
+            display: grid !important;
             grid-template-columns: 100%;
             grid-template-rows: repeat(2, max-content);
             align-content: space-between;
@@ -549,8 +568,12 @@
         }
         &__subtitle {
             order: 3;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
             text-align: center;
-            @include fontSize(5vw, 110%, unset);
+            max-width: 100%;
+            @include fontSize(4vw, 110%, unset);
             @include textBorderBlack;
         }
         //форма
@@ -635,8 +658,11 @@
     }
 }
 
-@media (max-width:350px) {
+@media (max-width:360px) {
     .advertising-block {
-        height: 120vw;
+        height: 120vw !important;
+        &__slide {
+            padding: 4% 5px 7vw !important;
+        }
     }
 }
