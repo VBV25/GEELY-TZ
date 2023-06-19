@@ -104,7 +104,9 @@ $(document).ready(function() {
     $('.model-link').click(function() {
         $('.model-link').removeClass('active-nav-link');
         $(this).addClass('active-nav-link');
-        var textModelBtn = $(this).text();
+        var textModelBtn = $(this).text().toLowerCase();
+        console.log(textModelBtn);
+
         $('.model-car-text').text(textModelBtn)
             //--меняем фото в зависимости от модели--
         var galeryAllPhotoCar = $('.car-splice')
