@@ -272,7 +272,7 @@
 @media (max-width: 360px) {
     .header {
         &__logo {
-            width: 60%;
+            width: 58%;
             order: 1;
         }
         &__btn {
@@ -280,6 +280,9 @@
             order: 2;
             padding: 5px 7px;
             @include fontSize(12px, 13px, 500);
+        }
+        &__address {
+            @include fontSize(9px, 11px, 500);
         }
     }
 }

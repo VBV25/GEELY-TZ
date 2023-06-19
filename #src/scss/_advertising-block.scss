@@ -143,6 +143,8 @@
         content: ' ✓';
     }
     &__link {
+        padding-left: 2px;
+        color: $whiteColor;
         text-decoration: underline;
         cursor: pointer;
     }

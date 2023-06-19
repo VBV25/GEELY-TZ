@@ -6,9 +6,18 @@ $(document).ready(function() {
         "hideOnOverlayClick": true,
         "overlayShow": true,
         "overlayOpacity": 0.7,
+    });
 
-    })
-
+    $('.policy-popup').fancybox({
+        "hideOnOverlayClick": true,
+        "overlayShow": true,
+        "overlayOpacity": 0.7,
+    });
+    $('.nav-contact-popup').fancybox({
+        "hideOnOverlayClick": true,
+        "overlayShow": true,
+        "overlayOpacity": 0.7,
+    });
 
 
 
@@ -88,6 +97,11 @@ $(document).ready(function() {
         $('body,html').addClass('hidden');
     });
     $('.navigation-block__btn-exit').click(function() {
+        $('.navigation-block__model').attr('style', '');
+        $('.navigation-block__menu').attr('style', '');
+        $('body,html').removeClass('hidden');
+    })
+    $('.navigation-block__link').click(function() {
         $('.navigation-block__model').attr('style', '');
         $('.navigation-block__menu').attr('style', '');
         $('body,html').removeClass('hidden');

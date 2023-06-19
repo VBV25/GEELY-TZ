@@ -9,13 +9,13 @@
                 <img src="img/svg/label-6yers.svg" alt="Label">
             </div>
             <div class="form-popup__car-photo">
-                <img src="img/coolray/2.png" alt="Car-photo">
+                <img class="car-splice" src="img/coolray/2.png" alt="Car-photo">
             </div>
         </div>
         <!--'телефон'-->
         <div class="form-popup__input-block">
             <input class="form-popup__phone-input" type="phone" placeholder="Номер телефона" id="phonePopup" required>
-            <div class="form-popup__err-massage">11</div>
+            <div class="form-popup__err-massage"></div>
         </div>
         <!--'кнопка отправки'-->
         <button class="form-popup__btn-form" type="submit" id="btnFormPopup">Отправить
@@ -23,7 +23,8 @@
         <!--'чекбокс'-->
         <div class="form-popup__checkbox">
             <input id="formAgreement" checked type="checkbox" name="agreement" class="form-popup__checkbox-input">
-            <label for="formAgreement" class="form-popup__checkbox-label">Согласие на <span class="form-popup__link">
+            <label for="formAgreement" class="form-popup__checkbox-label">Согласие на <span
+                    class="form-popup__link policy-popup" href="#policy">
                     обработку персональных данных</span>
             </label>
 

@@ -2,6 +2,8 @@
     position: relative;
     width: max-content;
     height: max-content;
+    background-color: $navBlockColor;
+    padding: 44px !important;
     //обертка формы
     &__form-container {
         width: 400px;
@@ -123,20 +125,9 @@
         content: ' ✓';
     }
     &__link {
+        padding-left: 3px;
         text-decoration: underline;
         cursor: pointer;
-    }
-}
-
-//-----фансибокс стили--
-.fancybox-content {
-    background-color: $navBlockColor !important;
-}
-
-.fancybox-close-small {
-    color: $smokeColor !important;
-    &:hover {
-        color: $blueBullet !important;
     }
 }
 
@@ -144,17 +135,18 @@
 //------------------------
 //------------------------
 //----------MEDIA--------------
-@media (max-width: 520px) {
+@media (max-width: 570px) {
     .form-popup {
+        padding: 24px !important;
         //обертка формы
         &__form-container {
-            width: 250px;
+            width: 70vw;
             row-gap: 10px;
         }
         //заголовок
         &__title {
             margin-bottom: 10px;
-            //  @include fontSize(20px, 40px, 800);
+            @include fontSize(26px, 35px, 800);
         }
         //группа изображений
         &__img-group {
@@ -182,42 +174,37 @@
         &__btn-form {
             height: 46px;
             padding: 10px;
-            // @include fontSize(16px, 16px, unset);
-        }
-        //согласие блок
-        &__checkbox-label {
-            //  @include fontSize(11px, 13px, unset);
-        }
-    }
-    .fancybox-content {
-        padding: 25px 44px !important;
-    }
-}
-
-@media (max-width: 370px) {
-    .form-popup {
-        //обертка формы
-        &__form-container {
-            width: 250px;
-        }
-        //заголовок
-        &__title {
-            margin-bottom: 5px;
-            @include fontSize(20px, 30px, 800);
-        }
-        //--части формы
-        &__phone-input,
-        &__btn-form {
-            height: 30px;
-            padding: 5px;
-            @include fontSize(14px, 14px, unset);
+            @include fontSize(16px, 16px, unset);
         }
         //согласие блок
         &__checkbox-label {
             @include fontSize(11px, 13px, unset);
         }
     }
-    .fancybox-content {
-        padding: 26px 14px !important;
+}
+
+@media (max-width: 370px) {
+    .form-popup {
+        padding: 30px 10px !important;
+        //обертка формы
+        &__form-container {
+            width: 80vw;
+        }
+        //заголовок
+        &__title {
+            margin-bottom: 5px;
+            @include fontSize(21px, 35px, 800);
+        }
+        //--части формы
+        &__phone-input,
+        &__btn-form {
+            height: 30px;
+            padding: 5px;
+            @include fontSize(13px, 13px, unset);
+        }
+        //согласие блок
+        &__checkbox-label {
+            @include fontSize(9px, 15px, unset);
+        }
     }
 }

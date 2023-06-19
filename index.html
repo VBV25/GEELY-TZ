@@ -64,7 +64,7 @@
             <a href="#advertisingFormBlock" class="navigation-block__link advertising-form-block">Трейд-ин</a>
             <a href="#advertisingFormBlock" class="navigation-block__link  advertising-form-block">Кредит</a>
             <a href="#advertisingFormBlock" class="navigation-block__link  advertising-form-block">Тест-драйв</a>
-            <a href="#advertisingContacts" class="navigation-block__link  advertising-form-block">Контакты</a>
+            <a href="#contactPopup" class="navigation-block__link  advertising-form-block nav-contact-popup">Контакты</a>
         </nav>
     </div>
 </section>
@@ -104,8 +104,9 @@
                 <div class="advertising-block__checkbox">
 
                     <input id="formAgreement" checked type="checkbox" name="agreement" class="advertising-block__checkbox-input">
-                    <label for="formAgreement" class="advertising-block__checkbox-label">Согласие на <span
-                            class="advertising-block__link"> обработку персональных данных</span>
+                    <label for="formAgreement" class="advertising-block__checkbox-label">Согласие на <a
+                            class="advertising-block__link policy-popup" href="#policy"> обработку персональных
+                            данных</a>
                     </label>
 
                 </div>
@@ -351,13 +352,13 @@
                 <img src="img/svg/label-6yers.svg" alt="Label">
             </div>
             <div class="form-popup__car-photo">
-                <img src="img/coolray/2.png" alt="Car-photo">
+                <img class="car-splice" src="img/coolray/2.png" alt="Car-photo">
             </div>
         </div>
         <!--'телефон'-->
         <div class="form-popup__input-block">
             <input class="form-popup__phone-input" type="phone" placeholder="Номер телефона" id="phonePopup" required>
-            <div class="form-popup__err-massage">11</div>
+            <div class="form-popup__err-massage"></div>
         </div>
         <!--'кнопка отправки'-->
         <button class="form-popup__btn-form" type="submit" id="btnFormPopup">Отправить
@@ -365,13 +366,40 @@
         <!--'чекбокс'-->
         <div class="form-popup__checkbox">
             <input id="formAgreement" checked type="checkbox" name="agreement" class="form-popup__checkbox-input">
-            <label for="formAgreement" class="form-popup__checkbox-label">Согласие на <span class="form-popup__link">
+            <label for="formAgreement" class="form-popup__checkbox-label">Согласие на <span
+                    class="form-popup__link policy-popup" href="#policy">
                     обработку персональных данных</span>
             </label>
 
         </div>
     </form>
 
+</section>
+    <section class="policy" id="policy" style="display: none;">
+    <h2 class="policy__title">Политика кофиденциальности</h2>
+    <p class="policy__text">Здесь должен быть текст политики конфиденциальности и обработки персональных данных.</p>
+</section>
+    <section id="contactPopup" class="contact-popup" style="display: none;">
+    <div class="contact-popup__logo-group"> <img src="img/svg/geely-logo.svg" alt="GEELY">
+
+        <img src="img/orbis.jpg" alt="Orbis AUTO">
+    </div>
+    <h2 class="contact-popup__title">Контакты</h2>
+    <p class="contact-popup__subtitle">Контактный телефон:</p>
+    <div class="contact-popup__text-group">
+        <img src="img/svg/phone.svg" alt="&#9990">
+        <p class="contact-popup__text">+7(778) 003-76-86</p>
+    </div>
+    <p class="contact-popup__subtitle">Адрес:</p>
+    <div class="contact-popup__text-group">
+        <img src="img/svg/map-mark.svg" alt="map">
+        <p class="contact-popup__text">GEELY SHYMKENT<br>Тамерлановское шоссе 90Б.</p>
+    </div>
+    <div class="contact-popup__map-wrapper">
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/orbis_auto/101510722133/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Orbis Auto</a><a href="https://yandex.ru/maps/221/chimkent/category/car_dealership/184105322/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:14px;">Автосалон в Шымкенте</a><iframe src="https://yandex.ru/map-widget/v1/?filter=chain_id%3A214060132424&ll=69.532521%2C42.352719&mode=search&oid=101510722133&ol=biz&sctx=ZAAAAAgBEAAaKAoSCUZ%2B%2FRAb9ElAERS0yeGTkEdAEhIJPiXnxB7ayT8RJoqQup19tT8iBgABAgMEBSgKOABAs1BIAWIrcmVhcnI9c2NoZW1lX0xvY2FsL0dlby9FbmFibGVCZWF1dHlGaWx0ZXI9MWoCa3qdAc3MTD2gAQCoAQC9AZeTagfCAQbV5IqU%2BgLqAQDyAQD4AQCCAjdPcmJpcyBBdXRvINCi0LDQvNC10YDQu9Cw0L3QvtCy0YHQutC%2B0LUg0YjQvtGB0YHQtSA5MNCRigIAkgIDMjIxmgIMZGVza3RvcC1tYXBzqgJxMjE0MDYwMTMyNDI0LDYwMDIyNDQsMTMzNjY3OTg1MTg4LDg4ODQyNzQ3NjA4LDEzNTk1MDY4NTg4LDg3NzUwMDM3NDgzLDY3ODAzMzk4Myw3NTM5MjE1MDIwLDI1MTg3NTcxMDEsMjYyOTE0MTkyMDSwAgE%3D&sll=69.532521%2C42.352719&sspn=0.013909%2C0.006284&text=Orbis%20Auto%20%D0%A2%D0%B0%D0%BC%D0%B5%D1%80%D0%BB%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2090%D0%91&z=16.96"
+                width="100%" height="95%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </div>
 </section>
     <!--'Script'-->
     <script src="libs/slick.min.js"></script>

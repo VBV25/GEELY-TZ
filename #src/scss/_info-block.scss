@@ -188,6 +188,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-transform: uppercase !important;
         .model-car-text {
             transform: rotateZ(-90deg);
             width: max-content;

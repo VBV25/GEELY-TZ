@@ -1,0 +1,31 @@
+.policy {
+    margin: auto;
+    padding: 15px 20px;
+    width: 100%;
+    height: max-content;
+    background-color: $smokeColor;
+    &__title {
+        text-align: center;
+        @include fontSize(4vw, 130%, 800);
+        margin-bottom: 10px;
+    }
+    &__text {
+        @include fontSize(2.5vw, 120%, 400)
+    }
+}
+
+//------------------------
+//------------------------
+//------------------------
+//----------MEDIA--------------
+@media (max-width: 768px) {
+    .policy {
+        padding: 30px 15px;
+        &__title {
+            @include fontSize(4.5vw, 130%, 800);
+        }
+        &__text {
+            @include fontSize(3.8vw, 120%, 400)
+        }
+    }
+}

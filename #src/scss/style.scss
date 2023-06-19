@@ -50,12 +50,27 @@ b {
     }
 }
 
+//-----фансибокс стили--
+.fancybox-content {
+    padding: 0px !important;
+    margin: auto 50px !important;
+}
+
+.fancybox-close-small {
+    color: $errMessage !important;
+    &:hover {
+        color: red !important;
+    }
+}
+
 @import 'header';
 @import 'navigation-block';
 @import 'advertising-block';
 @import 'info-block';
 //---------POPUP---------------
 @import 'form-popup';
+@import 'policy-popup';
+@import 'contacts-popup';
 //------------------------
 //------------------------
 //------------------------
@@ -82,10 +97,16 @@ b {
     .container {
         padding: 0px 9px;
     }
+    .fancybox-content {
+        margin: auto 10px !important;
+    }
 }
 
 @media (max-width: 480px) {
      :root {
         --widthContainer: 100%;
+    }
+    .fancybox-content {
+        margin: auto 0.5vw !important;
     }
 }
