@@ -1749,7 +1749,7 @@ b {
   .info-block__model-car {
     position: absolute;
     z-index: 1;
-    right: -150px;
+    right: 0px;
     top: 0px;
     width: 108px;
     padding: 120px 0px 110px;
